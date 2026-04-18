@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nasim Mortazavi — Computational Neuroscience & Data Science</title>
+  <meta name="description" content="Portfolio of Nasim Mortazavi, Ph.D. Candidate in Computational Neuroscience at Western University. Human intracranial electrophysiology, statistical modelling, and clinical data science." />
+  <meta name="author" content="Nasim Mortazavi" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nasim Mortazavi — Computational Neuroscience" />
+  <meta property="og:description" content="Ph.D. Candidate specialising in human intracranial electrophysiology, hippocampal memory dynamics, and biomedical data science." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nasim-mortazavi.github.io/" />
+
+  <!-- Fonts (single link tag — no build step) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">NM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" class="hero" aria-label="Introduction">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Computational Neuroscience &amp; Data Science</p>
+      <h1 class="hero-name">Nasim<br>Mortazavi</h1>
+      <p class="hero-title">Quantitative Research Scientist &nbsp;·&nbsp; Statistical Modelling &nbsp;·&nbsp; Human Intracranial Electrophysiology</p>
+      <p class="hero-bio">
+        I study how the human hippocampus encodes memories — using intracranial recordings,
+        mixed-effects statistical models, and reproducible computational pipelines built on
+        real clinical data. My work sits at the intersection of neuroscience, applied
+        statistics, and biomedical data science.
+      </p>
+      <div class="hero-actions">
+        <a href="#research" class="btn btn-primary">View Research</a>
+        <a href="#publications" class="btn btn-outline">Publications</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/Nasim-Mortazavi" class="hero-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/nasim-mortazavi-438090120/" class="hero-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:nasim.mor.85@gmail.com" class="hero-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+        <a href="https://nasim-mortazavi.github.io/" class="hero-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Website
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats" aria-label="Research highlights">
+      <div class="stat-badge">
+        <strong>25+</strong>
+        <span>Patients analysed</span>
+      </div>
+      <div class="stat-badge">
+        <strong>12+</strong>
+        <span>Conference presentations</span>
+      </div>
+      <div class="stat-badge">
+        <strong>7+</strong>
+        <span>Publications</span>
+      </div>
+      <div class="stat-badge">
+        <strong>2</strong>
+        <span>MSc students mentored</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="section section-alt" aria-labelledby="about-heading">
+  <div class="container">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <h2 class="section-title" id="about-heading">Bridging neuroscience,<br>statistics, and clinical data</h2>
+        <p>
+          I am a Ph.D. Candidate in Neuroscience at Western University (Schulich School of Medicine &amp; Dentistry),
+          working on human intracranial electrophysiology recordings collected from patients with temporal lobe epilepsy.
+          My thesis investigates how the hippocampus — particularly CA1 — supports associative learning and memory,
+          using stereo-EEG (SEEG) local field potentials and single-unit activity.
+        </p>
+        <p>
+          Before neuroscience, I trained as a physicist: I hold an M.Sc. in Computational Physics from Western University
+          and an M.Sc. in Theoretical Particle Physics from Isfahan University of Technology. That quantitative foundation
+          shapes how I approach every analysis — with emphasis on model validity, reproducibility, and honest uncertainty
+          quantification.
+        </p>
+        <p>
+          Across both academic and industry contexts, I build end-to-end analytical pipelines — from raw clinical data and
+          QC through statistical modelling (GLMM, Bayesian inference) and ML-based detection — and communicate results to
+          clinicians, engineers, and scientific teams. I am fluent in English and a native Farsi speaker; Canadian Permanent
+          Resident, available without sponsorship.
+        </p>
+      </div>
+      <div class="about-highlights stagger-children fade-up">
+        <div class="highlight-card">
+          <div class="highlight-icon">🧠</div>
+          <div>
+            <h4>Human Intracranial Recordings</h4>
+            <p>SEEG/iEEG LFP and single-unit data from 25+ epilepsy patients at London Health Sciences Centre.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">📊</div>
+          <div>
+            <h4>Mixed-Effects Statistical Modelling</h4>
+            <p>GLMM (lme4), Bayesian inference, state-space models — with rigorous diagnostics and permutation testing.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🔁</div>
+          <div>
+            <h4>Reproducible Pipelines</h4>
+            <p>End-to-end Python/R workflows with version control, automated QC gates, and BIDS-compatible outputs.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🏥</div>
+          <div>
+            <h4>Clinical Data Experience</h4>
+            <p>PHI-compliant data governance, multi-disciplinary collaboration with neurosurgeons, neurologists, and EEG technologists.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESEARCH THEMES
+     ============================================================ -->
+<section id="research" class="section section-dark" aria-labelledby="research-heading">
+  <div class="container">
+    <p class="section-label">Research</p>
+    <h2 class="section-title" id="research-heading">Core Research Areas</h2>
+    <p class="section-intro">
+      My work combines human neurophysiology, statistical modelling, and open toolbox development
+      to study memory and learning in the human brain.
+    </p>
+    <div class="themes-grid stagger-children">
+
+      <div class="theme-card fade-up">
+        <div class="theme-icon">🌊</div>
+        <h3>Hippocampal Memory Dynamics</h3>
+        <p>
+          Characterising how hippocampal CA1 sharp-wave ripples, theta oscillations, and ensemble
+          activity support associative encoding and subsequent recall during virtual navigation tasks
+          in SEEG-implanted patients.
+        </p>
+        <div class="theme-tags">
+          <span class="theme-tag">SEEG / iEEG</span>
+          <span class="theme-tag">Sharp-Wave Ripples</span>
+          <span class="theme-tag">CA1</span>
+          <span class="theme-tag">Associative Memory</span>
+        </div>
+      </div>
+
+      <div class="theme-card fade-up">
+        <div class="theme-icon">⚡</div>
+        <h3>Interictal Discharge Detection &amp; Impact</h3>
+        <p>
+          Developing discriminative algorithms to separate physiological ripples from pathological
+          interictal epileptiform discharges (IEDs), and quantifying how IED burden disrupts
+          hippocampal encoding signals and downstream memory performance.
+        </p>
+        <div class="theme-tags">
+          <span class="theme-tag">IED Detection</span>
+          <span class="theme-tag">SWR Classification</span>
+          <span class="theme-tag">PyTorch CNN</span>
+          <span class="theme-tag">Epilepsy</span>
+        </div>
+      </div>
+
+      <div class="theme-card fade-up">
+        <div class="theme-icon">📐</div>
+        <h3>Statistical Modelling of Neural Events</h3>
+        <p>
+          Applying generalized linear mixed-effects models (GLMM), Bayesian inference, and
+          state-space models to link trial-level neural features to behaviour — accounting for
+          subject variability, electrode nesting, and learning-state trajectories.
+        </p>
+        <div class="theme-tags">
+          <span class="theme-tag">GLMM / lme4</span>
+          <span class="theme-tag">Bayesian Inference</span>
+          <span class="theme-tag">State-Space Models</span>
+          <span class="theme-tag">R &amp; Python</span>
+        </div>
+      </div>
+
+      <div class="theme-card fade-up">
+        <div class="theme-icon">🔬</div>
+        <h3>Human Single-Neuron Recording Programmes</h3>
+        <p>
+          Building the clinical infrastructure, vendor relationships, and spike-sorting pipelines
+          required to capture single-unit activity from hybrid macro/micro-electrodes in a hospital
+          epilepsy monitoring unit — among Canada's first such programmes.
+        </p>
+        <div class="theme-tags">
+          <span class="theme-tag">Single-Unit Recording</span>
+          <span class="theme-tag">Spike Sorting</span>
+          <span class="theme-tag">Clinical Infrastructure</span>
+          <span class="theme-tag">Blackrock / DIXI</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section id="experience" class="section section-alt" aria-labelledby="exp-heading">
+  <div class="container">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title" id="exp-heading">Research &amp; Clinical Roles</h2>
+    <p class="section-intro">
+      A career spanning computational physics, clinical neurophysiology, and applied data science —
+      always grounded in real data and rigorous quantitative methods.
+    </p>
+    <div class="timeline fade-up">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Western University · Schulich School of Medicine</p>
+        <p class="timeline-role">Ph.D. Candidate &amp; Graduate Research Associate — Computational Neuroscience</p>
+        <ul class="timeline-bullets">
+          <li>Thesis: "Hippocampal Dynamics Supporting Associative Learning and Memory in Humans" — end-to-end SEEG analysis from 25 patients (~100 GB/patient) in Python and R.</li>
+          <li>Built GLMM-based statistical models linking hippocampal LFP features to trial-level behavioural outcomes; applied Bayesian inference and state-space learning-curve estimation.</li>
+          <li>Designed and validated SWR and IED detection pipelines; led open-source toolbox development (TODs, under revision).</li>
+          <li>Mentored two Master's students from admission through thesis defence on statistical modelling and neural data analysis.</li>
+          <li>Co-authored 7+ publications and delivered 12+ conference presentations.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">London Health Sciences Centre (EMU) · Robarts Research Institute</p>
+        <p class="timeline-role">Clinical Research Associate — Intracranial Neurophysiology &amp; Data Science</p>
+        <ul class="timeline-bullets">
+          <li>Spearheaded the establishment of a research-ready single-neuron recording programme bridging hospital EMU and university research teams — among Canada's first such programmes.</li>
+          <li>Designed PHI-compliant data management practices (redaction workflows, access control, audit-ready documentation) for clinical neurophysiology datasets.</li>
+          <li>Built Python/R tooling for validated research exports with automated QC gates; implemented electrode localisation (3D Slicer, HippUnfold) integrated into downstream pipelines.</li>
+          <li>Led vendor coordination with Ad-Tech, DIXI Medical, and Blackrock Neurotech for clinical-grade acquisition hardware.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Robarts Research Institute</p>
+        <p class="timeline-role">Research Assistant — Clinical Neuroscience &amp; Machine Learning</p>
+        <ul class="timeline-bullets">
+          <li>Applied ML and statistical methods to multimodal clinical neuroscience datasets; produced standardised, analysis-ready data formats with QC documentation.</li>
+          <li>Collaborated with clinical and academic teams to translate study hypotheses into executable analysis plans.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Western University · Physics &amp; Astronomy Department</p>
+        <p class="timeline-role">Graduate Research Assistant — Computational Physics &amp; Granger Causality</p>
+        <ul class="timeline-bullets">
+          <li>Applied Multivariate Granger Causality (MVGC) to map directed cortical connectivity changes in human EEG during propofol-induced sedation.</li>
+          <li>Contributed to Chapter 10 ("Anesthesia and Resting State Networks") of the Oxford University Press fMRI volume.</li>
+          <li>Developed reproducible analysis templates now applied to clinical SEEG datasets.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">University of Waterloo · Systems Design Engineering</p>
+        <p class="timeline-role">Visiting Research Scholar — Neurorobotics Lab</p>
+        <ul class="timeline-bullets">
+          <li>Worked on computational models of biological neural systems under Dr. Bryan Tripp; applied statistical modelling and simulation-based inference to neural dynamics.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section id="projects" class="section" aria-labelledby="proj-heading">
+  <div class="container">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title" id="proj-heading">Selected Research Projects</h2>
+    <p class="section-intro">
+      End-to-end research contributions — from clinical data collection and signal processing
+      through statistical modelling and open toolbox development.
+    </p>
+    <div class="projects-grid stagger-children">
+
+      <div class="project-card fade-up">
+        <div class="project-card-icon">🌊</div>
+        <h3>SEEG Associative Memory Modelling — CA1 Focus</h3>
+        <p>
+          End-to-end Python/R pipelines linking trial-level SEEG features (sharp-wave ripple rate,
+          spectral power, PAC) to associative memory performance across 25 patients.
+          GLMM models account for electrode nesting, subject variability, and IED co-occurrence.
+          Two manuscripts under revision.
+        </p>
+        <div class="project-card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">R / lme4</span>
+          <span class="tag">GLMM</span>
+          <span class="tag">SEEG</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-icon">🛠️</div>
+        <h3>TODs — Transient Oscillation Detectors Toolbox</h3>
+        <p>
+          Open-source toolbox (Python/MATLAB) for detecting and characterising transient oscillatory
+          events — sharp-wave ripples, spindles, high-gamma bursts — in noisy human intracranial
+          recordings. Includes 1D CNN classifier (PyTorch), QC framework, and BIDS-compatible outputs.
+          Under revision for publication.
+        </p>
+        <div class="project-card-footer">
+          <span class="tag">PyTorch</span>
+          <span class="tag">Python</span>
+          <span class="tag">BIDS</span>
+          <span class="tag tag-indigo">Open Source</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-icon">⚡</div>
+        <h3>SWR vs. IED Discrimination in Epilepsy</h3>
+        <p>
+          Discriminative feature pipeline to separate physiological sharp-wave ripples from
+          pathological interictal discharges in hippocampal SEEG channels. Spectral shape,
+          event duration, and coupling context features benchmarked across patients;
+          imbalance-aware evaluation with threshold optimisation.
+        </p>
+        <div class="project-card-footer">
+          <span class="tag">scikit-learn</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Signal Processing</span>
+          <span class="tag">Epilepsy</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-icon">🗺️</div>
+        <h3>3D Electrode Localisation — HippUnfold Integration</h3>
+        <p>
+          Python workflow combining HippUnfold subfield segmentation, post-implant CT/MRI
+          coregistration, and 3D Slicer scripting to assign SEEG contacts to hippocampal
+          subfields (CA1/CA3/DG) with automated visual QC. Integrated into downstream
+          statistical modelling pipelines.
+        </p>
+        <div class="project-card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">HippUnfold</span>
+          <span class="tag">3D Slicer</span>
+          <span class="tag">Neuroimaging</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-icon">📈</div>
+        <h3>State-Space Learning Curve Estimation</h3>
+        <p>
+          Adapted the Smith et al. (2004) state-space framework to recover trial-wise learning
+          probability from binary behavioural sequences in the associative memory task.
+          Trial-level learning state used as a covariate in GLMM models.
+          Porting MATLAB toolbox to Python for open-source release.
+        </p>
+        <div class="project-card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">State-Space</span>
+          <span class="tag">Behavioural Modelling</span>
+          <span class="tag tag-indigo">In Progress</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-icon">🐒</div>
+        <h3>Decoding Working Memory from Primate Multi-Array Recordings</h3>
+        <p>
+          Random-forest decoders trained on multi-electrode array spiking data from non-human
+          primate prefrontal cortex to predict remembered target location in 3D space,
+          working-memory load, and item identity. Established population-code baselines
+          informing later human analyses.
+        </p>
+        <div class="project-card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Random Forests</span>
+          <span class="tag">Systems Neuro</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PUBLICATIONS
+     ============================================================ -->
+<section id="publications" class="section section-alt" aria-labelledby="pub-heading">
+  <div class="container">
+    <p class="section-label">Publications</p>
+    <h2 class="section-title" id="pub-heading">Scholarly Output</h2>
+    <p class="section-intro">7+ peer-reviewed publications · 12+ first-author conference presentations</p>
+
+    <!-- Under revision -->
+    <div class="pub-group fade-up">
+      <p class="pub-group-title">Manuscripts Under Revision</p>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <span class="pub-num">1</span>
+          <p class="pub-text">
+            <strong>Mortazavi, N.</strong>, Khaki, M., Gilmore, G., Burneo, J., Steven, D., Suller-Marti, A., Martinez-Trujillo, J.
+            "The Role of the Human Hippocampus CA1 in Associative Memory and Navigation."
+            <span class="pub-status">Under revision</span>
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">2</span>
+          <p class="pub-text">
+            <strong>Mortazavi, N.</strong>, et al.
+            "TODs: A Toolbox for Sharp-Wave Ripple Detection in Human SEEG Recordings."
+            <span class="pub-status">Under revision</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- In preparation -->
+    <div class="pub-group fade-up">
+      <p class="pub-group-title">Manuscripts in Preparation</p>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <span class="pub-num">3</span>
+          <p class="pub-text">
+            <strong>Mortazavi, N.</strong>, et al.
+            "Single-Neuron Recordings in the Human Hippocampus using Inline Hybrid Electrodes."
+            <span class="pub-status">In prep</span>
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">4</span>
+          <p class="pub-text">
+            <strong>Mortazavi, N.</strong>, et al.
+            "Pathological Interictal Discharges Interfere with Hippocampal Encoding Signals during Associative Learning."
+            <span class="pub-status">In prep</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Journal articles -->
+    <div class="pub-group fade-up">
+      <p class="pub-group-title">Peer-Reviewed Journal Articles &amp; Conference Abstracts</p>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <span class="pub-num">5</span>
+          <p class="pub-text">
+            <strong>Mortazavi, N.</strong>, et al. (2021).
+            Discrimination of interictal epileptiform discharges and sharp wave ripples in SEEG recordings in patients with temporal lobe epilepsy.
+            <em>Epilepsia, 62</em>, 111. Wiley.
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">6</span>
+          <p class="pub-text">
+            <strong>Mortazavi, N.</strong>, Khaki, M., Gilmore, G., Burneo, J., Steven, D., Suller-Marti, A., Martinez-Trujillo, J. (2022).
+            Virtual visual navigation during context-dependent learning in the human hippocampus using intracranial recordings (SEEG).
+            <em>Journal of Vision, 22</em>(14):4444.
+            <a href="https://jov.arvojournals.org/article.aspx?articleid=2785091" target="_blank" rel="noopener">↗ Link</a>
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">7</span>
+          <p class="pub-text">
+            Khaki, M., <strong>Mortazavi, N.</strong>, Roussy, M., Sachs, A., Martinez-Trujillo, J. (2022).
+            Temporal dynamics of neural ensemble coding of remembered target location in the primate prefrontal cortex.
+            <em>Journal of Vision, 22</em>(14):4150.
+            <a href="https://doi.org/10.1167/jov.22.14.4150" target="_blank" rel="noopener">↗ DOI</a>
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">8</span>
+          <p class="pub-text">
+            Khaki, M., Roussy, M., <strong>Mortazavi, N.</strong>, Luna, R., Sachs, A., Martinez-Trujillo, J. (2020).
+            Using decoders to understand working memory representations of 3D space in primate prefrontal neuronal ensembles.
+            <em>Journal of Vision, 20</em>(11):1474.
+            <a href="https://doi.org/10.1167/jov.20.11.1474" target="_blank" rel="noopener">↗ DOI</a>
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">9</span>
+          <p class="pub-text">
+            Khaki, M., <strong>Mortazavi, N.</strong> (2022).
+            Water Consumption Demand Pattern Analysis using Uncertain Smart Water Meter Data.
+            <em>Proceedings of ICAART</em>, 436–443.
+            <a href="https://doi.org/10.5220/0010834900003116" target="_blank" rel="noopener">↗ DOI</a>
+          </p>
+        </li>
+        <li class="pub-item">
+          <span class="pub-num">10</span>
+          <p class="pub-text">
+            Haghighat, M., <strong>Mortazavi, N.</strong> (2011).
+            g factor of the charged leptons in noncommutative spacetime.
+            <em>Iranian Journal of Physics Research, 11</em>(3), 265–272.
+            <a href="https://ijpr.iut.ac.ir/article_931.html?lang=en" target="_blank" rel="noopener">↗ Link</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Book chapters -->
+    <div class="pub-group fade-up">
+      <p class="pub-group-title">Book Chapters</p>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <span class="pub-num">11</span>
+          <p class="pub-text">
+            Ramani, R. (ed.; contrib. <strong>Mortazavi, N.</strong>). (2018).
+            Anesthesia and Resting State Networks.
+            In <em>Functional MRI: Basic Principles and Emerging Clinical Applications for Anesthesiology and the Neurological Sciences</em> (Chapter 10). Oxford University Press.
+            <a href="https://doi.org/10.1093/med/9780190297763.001.0001" target="_blank" rel="noopener">↗ DOI</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section id="skills" class="section" aria-labelledby="skills-heading">
+  <div class="container">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title" id="skills-heading">Technical Expertise</h2>
+    <p class="section-intro">
+      Tools and methods applied in real clinical and research settings — not a buzzword list.
+    </p>
+    <div class="skills-grid stagger-children fade-up">
+
+      <div class="skill-group">
+        <p class="skill-group-title">Languages</p>
+        <div class="skill-pills">
+          <span class="skill-pill primary">Python</span>
+          <span class="skill-pill primary">R</span>
+          <span class="skill-pill">MATLAB</span>
+          <span class="skill-pill">C / C++</span>
+          <span class="skill-pill">LaTeX</span>
+          <span class="skill-pill">Bash / Linux</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-title">Statistical Modelling</p>
+        <div class="skill-pills">
+          <span class="skill-pill primary">GLMM (lme4)</span>
+          <span class="skill-pill primary">Bayesian Inference</span>
+          <span class="skill-pill primary">State-Space Models</span>
+          <span class="skill-pill">Permutation Testing</span>
+          <span class="skill-pill">Bootstrapping</span>
+          <span class="skill-pill">MVGC</span>
+          <span class="skill-pill">Ising Models</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-title">Machine Learning</p>
+        <div class="skill-pills">
+          <span class="skill-pill primary">scikit-learn</span>
+          <span class="skill-pill primary">PyTorch</span>
+          <span class="skill-pill">PyMC</span>
+          <span class="skill-pill">Random Forests</span>
+          <span class="skill-pill">1D CNN</span>
+          <span class="skill-pill">Cross-Validation</span>
+          <span class="skill-pill">Error Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-title">Signal Processing</p>
+        <div class="skill-pills">
+          <span class="skill-pill primary">Spectro-Wavelet</span>
+          <span class="skill-pill primary">Phase-Amplitude Coupling</span>
+          <span class="skill-pill">FFT / FIR / IIR</span>
+          <span class="skill-pill">Time-Frequency Analysis</span>
+          <span class="skill-pill">MNE-Python</span>
+          <span class="skill-pill">FieldTrip</span>
+          <span class="skill-pill">Artifact Rejection</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-title">Neuroimaging &amp; Localisation</p>
+        <div class="skill-pills">
+          <span class="skill-pill primary">HippUnfold</span>
+          <span class="skill-pill primary">3D Slicer</span>
+          <span class="skill-pill">FastSurfer</span>
+          <span class="skill-pill">FreeSurfer</span>
+          <span class="skill-pill">CT/MRI Coregistration</span>
+          <span class="skill-pill">BIDS</span>
+          <span class="skill-pill">DICOM</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-title">Data &amp; Reproducibility</p>
+        <div class="skill-pills">
+          <span class="skill-pill primary">Git / GitHub</span>
+          <span class="skill-pill primary">Reproducible Pipelines</span>
+          <span class="skill-pill">ggplot2</span>
+          <span class="skill-pill">Matplotlib</span>
+          <span class="skill-pill">PHI Governance</span>
+          <span class="skill-pill">Automated QC</span>
+          <span class="skill-pill">Jupyter</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AWARDS
+     ============================================================ -->
+<section id="awards" class="section section-dark" aria-labelledby="awards-heading">
+  <div class="container">
+    <p class="section-label">Recognition</p>
+    <h2 class="section-title" id="awards-heading">Awards &amp; Honours</h2>
+    <div class="awards-list stagger-children fade-up">
+
+      <div class="award-card">
+        <div class="award-icon">🏆</div>
+        <div>
+          <h4>Schulich Dean's Research Scholarship</h4>
+          <p>Western University — competitive merit award for doctoral research in health sciences</p>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">🎖️</div>
+        <div>
+          <h4>Best Presentation — CNS Research Day</h4>
+          <p>Lawson Health Research Institute, Clinical Neurological Sciences</p>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">✈️</div>
+        <div>
+          <h4>Neuroscience Travel Award</h4>
+          <p>Western University — Neuroscience Graduate Program</p>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">🎓</div>
+        <div>
+          <h4>Visiting Graduate Scholar Award</h4>
+          <p>University of Waterloo — Systems Design Engineering</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EDUCATION (compact)
+     ============================================================ -->
+<section id="education" class="section section-alt" aria-labelledby="edu-heading">
+  <div class="container">
+    <p class="section-label">Education</p>
+    <h2 class="section-title" id="edu-heading">Academic Background</h2>
+    <div class="timeline fade-up">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Western University · Schulich School of Medicine &amp; Dentistry</p>
+        <p class="timeline-role">Ph.D. (Candidate), Neuroscience &nbsp;·&nbsp; GPA: A+</p>
+        <p class="timeline-desc">
+          <em>Thesis:</em> "Hippocampal Dynamics Supporting Associative Learning and Memory in Humans"<br>
+          Supervisors: Prof. Julio Martinez-Trujillo &amp; Dr. Ana Suller-Marti
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Western University</p>
+        <p class="timeline-role">M.Sc., Applied Physics (Computational) &nbsp;·&nbsp; GPA: A</p>
+        <p class="timeline-desc">
+          <em>Thesis:</em> "Quantification of Causal Inferences in the Healthy Brain using Multivariate Granger Causality"
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Isfahan University of Technology (IUT) &amp; Zanjan University</p>
+        <p class="timeline-role">M.Sc., Theoretical Particle Physics &nbsp;·&nbsp; GPA: A+</p>
+        <p class="timeline-desc">Noncommutative spacetime, QED phenomenology.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-org">Azad University (IAU), Isfahan</p>
+        <p class="timeline-role">B.Sc., Physics &nbsp;·&nbsp; GPA: A+ (final two years)</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="contact-section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-inner">
+      <div>
+        <p class="section-label">Contact</p>
+        <h2 class="contact-heading" id="contact-heading">Let's talk about<br><span>research or roles</span></h2>
+        <p class="contact-sub">
+          Open to postdoctoral positions in computational neuroscience, research scientist roles
+          in biomedical/clinical data science, and collaborative research projects in human
+          intracranial electrophysiology or applied statistical modelling.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:nasim.mor.85@gmail.com" class="contact-link">
+            <span class="contact-link-icon">📧</span>
+            nasim.mor.85@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/nasim-mortazavi-438090120/" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-icon">💼</span>
+            LinkedIn — /in/nasim-mortazavi-438090120
+          </a>
+          <a href="https://github.com/Nasim-Mortazavi" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-icon">🐙</span>
+            GitHub — /Nasim-Mortazavi
+          </a>
+          <a href="tel:+12269777228" class="contact-link">
+            <span class="contact-link-icon">📞</span>
+            (226) 977-7228 &nbsp;·&nbsp; London, ON, Canada
+          </a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <h3>Quick Links</h3>
+        <p>CVs tailored for different application types, plus direct links to profiles and code repositories.</p>
+        <div class="contact-card-links">
+          <a href="https://github.com/Nasim-Mortazavi" class="contact-card-link" target="_blank" rel="noopener">
+            🐙 GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/nasim-mortazavi-438090120/" class="contact-card-link" target="_blank" rel="noopener">
+            💼 LinkedIn
+          </a>
+          <a href="https://nasim-mortazavi.github.io/" class="contact-card-link" target="_blank" rel="noopener">
+            🌐 Website
+          </a>
+          <a href="mailto:nasim.mor.85@gmail.com" class="contact-card-link">
+            📧 Email Me
+          </a>
+        </div>
+        <br>
+        <h3>Research Interests</h3>
+        <p>
+          Human hippocampal dynamics · Associative memory &amp; navigation ·
+          Intracranial electrophysiology (SEEG/iEEG) · Statistical modelling of neural data ·
+          Biomedical signal processing · Reproducible computational neuroscience · Clinical data science
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© Nasim Mortazavi · London, ON, Canada · Permanent Resident</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
