@@ -3,36 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nasim Mortazavi | Computational Neuroscience</title>
-<meta name="description" content="Nasim Mortazavi is a computational neuroscientist studying human hippocampal sharp-wave ripples, associative memory, spatial learning, and intracranial SEEG recordings.">
+
+<title>Nasim Mortazavi | Computational Scientist | Neuroscience & AI for Health</title>
+
+<meta name="description" content="Nasim Mortazavi is a computational scientist working at the intersection of human neuroscience, health data, AI, machine learning, statistical modeling, and scientific software development.">
 <meta name="author" content="Nasim Mortazavi">
 <meta name="theme-color" content="#faf7ef">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
     --bg:#fbf8f1;
-    --bg-2:#f2eadc;
+    --bg-2:#f3eadc;
     --paper:#fffdf8;
-    --paper-soft:#f7f1e7;
+    --paper-soft:#f8f2e8;
     --ink:#171511;
-    --ink-soft:#2b2923;
+    --ink-soft:#2d2922;
     --muted:#716b60;
-    --muted-2:#8b8375;
+    --muted-2:#91887a;
     --line:#ded4c3;
-    --line-strong:#cfc1ad;
+    --line-strong:#cdbfa8;
     --accent:#315a40;
-    --accent-2:#6f8f73;
-    --accent-3:#a77745;
-    --shadow:0 24px 70px rgba(47, 38, 24, .12);
-    --shadow-soft:0 12px 36px rgba(47, 38, 24, .08);
-    --radius:24px;
-    --radius-sm:14px;
-    --maxw:1120px;
-    --content:720px;
+    --accent-dark:#203f2d;
+    --accent-soft:#6f8f73;
+    --gold:#a77745;
+    --gold-soft:#d8b27a;
+    --red-soft:#9b5a46;
+    --shadow:0 24px 70px rgba(47,38,24,.12);
+    --shadow-soft:0 14px 38px rgba(47,38,24,.08);
+    --radius:26px;
+    --radius-sm:16px;
+    --maxw:1140px;
+    --content:760px;
   }
 
   *{
@@ -52,9 +58,9 @@
     line-height:1.72;
     color:var(--ink);
     background:
-      radial-gradient(circle at 10% 0%, rgba(111,143,115,.16), transparent 34rem),
-      radial-gradient(circle at 92% 14%, rgba(167,119,69,.14), transparent 30rem),
-      linear-gradient(180deg, var(--bg), #f8f2e8 52%, var(--bg));
+      radial-gradient(circle at 8% -4%, rgba(111,143,115,.18), transparent 34rem),
+      radial-gradient(circle at 95% 8%, rgba(167,119,69,.15), transparent 30rem),
+      linear-gradient(180deg, var(--bg), #f8f2e8 58%, var(--bg));
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
   }
@@ -64,7 +70,7 @@
     position:fixed;
     inset:0;
     pointer-events:none;
-    opacity:.23;
+    opacity:.22;
     background-image:
       linear-gradient(rgba(49,90,64,.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(49,90,64,.06) 1px, transparent 1px);
@@ -82,7 +88,7 @@
   }
 
   a:hover{
-    color:#203f2d;
+    color:var(--accent-dark);
   }
 
   .skip-link{
@@ -106,6 +112,7 @@
   .site-shell{
     width:min(calc(100% - 40px), var(--maxw));
     margin:0 auto;
+    position:relative;
   }
 
   .topbar{
@@ -114,8 +121,8 @@
     z-index:50;
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
-    background:rgba(251,248,241,.82);
-    border-bottom:1px solid rgba(222,212,195,.72);
+    background:rgba(251,248,241,.84);
+    border-bottom:1px solid rgba(222,212,195,.76);
   }
 
   .nav-inner{
@@ -137,13 +144,13 @@
   }
 
   .brand-mark{
-    width:38px;
-    height:38px;
+    width:39px;
+    height:39px;
     display:grid;
     place-items:center;
     border:1px solid var(--line-strong);
     border-radius:50%;
-    background:linear-gradient(145deg, rgba(255,255,255,.74), rgba(242,234,220,.74));
+    background:linear-gradient(145deg, rgba(255,255,255,.78), rgba(242,234,220,.78));
     box-shadow:0 8px 22px rgba(47,38,24,.08);
     font-family:"IBM Plex Mono", monospace;
     font-size:12px;
@@ -177,7 +184,7 @@
   nav ul{
     display:flex;
     align-items:center;
-    gap:6px;
+    gap:5px;
     list-style:none;
   }
 
@@ -185,7 +192,7 @@
     display:inline-flex;
     align-items:center;
     min-height:36px;
-    padding:0 11px;
+    padding:0 10px;
     border-radius:999px;
     font-family:"IBM Plex Mono", monospace;
     font-size:12px;
@@ -204,12 +211,16 @@
     position:relative;
   }
 
+  section{
+    scroll-margin-top:92px;
+  }
+
   .hero{
     display:grid;
-    grid-template-columns:minmax(0, 1.05fr) minmax(320px, .85fr);
-    gap:56px;
+    grid-template-columns:minmax(0, 1.05fr) minmax(340px, .9fr);
+    gap:58px;
     align-items:center;
-    padding:92px 0 74px;
+    padding:92px 0 76px;
   }
 
   .eyebrow{
@@ -229,23 +240,27 @@
     content:"";
     width:34px;
     height:1px;
-    background:var(--accent-2);
+    background:var(--accent-soft);
   }
 
   h1{
-    max-width:760px;
+    max-width:780px;
     font-family:"Fraunces", Georgia, serif;
     font-weight:600;
-    font-size:clamp(3.1rem, 8vw, 6.6rem);
+    font-size:clamp(3rem, 7.8vw, 6.5rem);
     line-height:.96;
     letter-spacing:-.045em;
     color:var(--ink);
   }
 
+  .hero-title-break{
+    display:block;
+  }
+
   .subtitle{
     margin-top:26px;
-    max-width:620px;
-    font-size:clamp(1.24rem, 2.2vw, 1.55rem);
+    max-width:650px;
+    font-size:clamp(1.22rem, 2.1vw, 1.52rem);
     line-height:1.52;
     color:var(--ink-soft);
   }
@@ -300,14 +315,36 @@
     transform:translateY(-2px);
   }
 
+  .hero-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:26px;
+  }
+
+  .hero-tags span{
+    display:inline-flex;
+    align-items:center;
+    min-height:28px;
+    padding:0 10px;
+    border:1px solid rgba(49,90,64,.18);
+    border-radius:999px;
+    background:rgba(255,253,248,.58);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
   .hero-card{
     position:relative;
-    min-height:470px;
-    border:1px solid rgba(207,193,173,.85);
+    min-height:500px;
+    border:1px solid rgba(207,193,173,.9);
     border-radius:var(--radius);
     background:
-      linear-gradient(145deg, rgba(255,253,248,.88), rgba(246,238,225,.82)),
-      radial-gradient(circle at 50% 30%, rgba(111,143,115,.16), transparent 18rem);
+      linear-gradient(145deg, rgba(255,253,248,.9), rgba(246,238,225,.82)),
+      radial-gradient(circle at 50% 30%, rgba(111,143,115,.17), transparent 18rem);
     box-shadow:var(--shadow);
     overflow:hidden;
   }
@@ -316,7 +353,7 @@
     content:"";
     position:absolute;
     inset:18px;
-    border:1px solid rgba(207,193,173,.56);
+    border:1px solid rgba(207,193,173,.55);
     border-radius:calc(var(--radius) - 8px);
     pointer-events:none;
   }
@@ -324,37 +361,39 @@
   .hero-card::after{
     content:"";
     position:absolute;
-    width:220px;
-    height:220px;
-    right:-80px;
-    top:-70px;
+    width:240px;
+    height:240px;
+    right:-90px;
+    top:-80px;
     border-radius:50%;
     background:rgba(167,119,69,.12);
     filter:blur(2px);
   }
 
-  .signal-visual{
+  .science-visual{
     position:absolute;
-    inset:44px 30px 120px;
+    inset:34px 26px 134px;
     display:grid;
     place-items:center;
   }
 
-  .signal-visual svg{
+  .science-visual svg{
     width:100%;
-    max-width:410px;
+    max-width:440px;
     height:auto;
     overflow:visible;
   }
 
-  .ripple-path{
-    stroke-dasharray:900;
-    stroke-dashoffset:900;
-    animation:drawSignal 3.6s ease forwards;
+  .draw-line{
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation:drawLine 3.2s ease forwards;
   }
 
-  @keyframes drawSignal{
-    to{stroke-dashoffset:0;}
+  @keyframes drawLine{
+    to{
+      stroke-dashoffset:0;
+    }
   }
 
   .hero-card-label{
@@ -391,17 +430,17 @@
   }
 
   .metric{
-    min-height:82px;
+    min-height:86px;
     padding:14px 12px;
-    border:1px solid rgba(222,212,195,.8);
+    border:1px solid rgba(222,212,195,.84);
     border-radius:16px;
-    background:rgba(255,253,248,.64);
+    background:rgba(255,253,248,.68);
   }
 
   .metric strong{
     display:block;
     font-family:"Fraunces", Georgia, serif;
-    font-size:1.15rem;
+    font-size:1.16rem;
     line-height:1.1;
     color:var(--accent);
   }
@@ -417,16 +456,12 @@
     color:var(--muted);
   }
 
-  section{
-    scroll-margin-top:86px;
-  }
-
   .section-card{
     margin:28px 0;
     padding:42px;
-    border:1px solid rgba(222,212,195,.82);
+    border:1px solid rgba(222,212,195,.84);
     border-radius:var(--radius);
-    background:rgba(255,253,248,.72);
+    background:rgba(255,253,248,.74);
     box-shadow:var(--shadow-soft);
   }
 
@@ -439,7 +474,7 @@
 
   .section-kicker{
     position:sticky;
-    top:98px;
+    top:100px;
   }
 
   h2{
@@ -479,6 +514,79 @@
     border-bottom-color:var(--accent);
   }
 
+  .toolkit{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:10px;
+    margin-top:26px;
+  }
+
+  .tool{
+    padding:14px 12px;
+    border:1px solid rgba(222,212,195,.84);
+    border-radius:14px;
+    background:rgba(248,242,232,.72);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    line-height:1.45;
+    color:var(--muted);
+  }
+
+  .tool strong{
+    display:block;
+    margin-bottom:4px;
+    font-family:"Newsreader", Georgia, serif;
+    font-size:1.05rem;
+    line-height:1.15;
+    color:var(--ink);
+  }
+
+  .research-feature{
+    display:grid;
+    grid-template-columns:minmax(0, .92fr) minmax(0, 1.08fr);
+    gap:24px;
+    align-items:center;
+    margin-bottom:24px;
+    padding:24px;
+    border:1px solid rgba(222,212,195,.84);
+    border-radius:var(--radius-sm);
+    background:
+      radial-gradient(circle at 20% 15%, rgba(111,143,115,.13), transparent 18rem),
+      rgba(248,242,232,.62);
+  }
+
+  .research-figure{
+    min-height:330px;
+    display:grid;
+    place-items:center;
+    border-radius:18px;
+    background:rgba(255,253,248,.64);
+    border:1px solid rgba(222,212,195,.72);
+    overflow:hidden;
+  }
+
+  .research-figure svg{
+    width:100%;
+    height:auto;
+    max-width:420px;
+    padding:12px;
+  }
+
+  .research-feature h3{
+    font-family:"Fraunces", Georgia, serif;
+    font-size:1.6rem;
+    line-height:1.15;
+    font-weight:600;
+    letter-spacing:-.015em;
+    color:var(--ink);
+  }
+
+  .research-feature p{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:1.02rem;
+  }
+
   .research-list{
     display:grid;
     gap:18px;
@@ -487,10 +595,10 @@
   .research-item{
     position:relative;
     padding:24px 24px 24px 28px;
-    border:1px solid rgba(222,212,195,.82);
+    border:1px solid rgba(222,212,195,.84);
     border-radius:var(--radius-sm);
     background:
-      linear-gradient(135deg, rgba(255,253,248,.82), rgba(247,241,231,.64));
+      linear-gradient(135deg, rgba(255,253,248,.84), rgba(247,241,231,.66));
     transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   }
 
@@ -508,7 +616,7 @@
     bottom:22px;
     width:3px;
     border-radius:999px;
-    background:linear-gradient(180deg, var(--accent), var(--accent-2));
+    background:linear-gradient(180deg, var(--accent), var(--accent-soft));
   }
 
   .research-item h3{
@@ -528,7 +636,7 @@
     line-height:1.6;
     letter-spacing:.08em;
     text-transform:uppercase;
-    color:var(--accent-2);
+    color:var(--accent-soft);
   }
 
   .research-item p{
@@ -538,6 +646,123 @@
     color:var(--muted);
   }
 
+  .project-intro{
+    max-width:var(--content);
+    margin-bottom:24px;
+    color:var(--ink-soft);
+  }
+
+  .project-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:16px;
+  }
+
+  .project-card{
+    position:relative;
+    min-height:260px;
+    display:flex;
+    flex-direction:column;
+    padding:24px;
+    border:1px solid rgba(222,212,195,.84);
+    border-radius:var(--radius-sm);
+    background:
+      linear-gradient(145deg, rgba(255,253,248,.84), rgba(248,242,232,.68));
+    overflow:hidden;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+
+  .project-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(49,90,64,.28);
+    box-shadow:0 16px 34px rgba(47,38,24,.09);
+  }
+
+  .project-card::after{
+    content:"";
+    position:absolute;
+    right:-48px;
+    top:-48px;
+    width:128px;
+    height:128px;
+    border-radius:50%;
+    background:rgba(49,90,64,.075);
+  }
+
+  .project-card h3{
+    position:relative;
+    z-index:1;
+    max-width:88%;
+    font-family:"Fraunces", Georgia, serif;
+    font-size:1.32rem;
+    font-weight:600;
+    line-height:1.18;
+    color:var(--ink);
+  }
+
+  .project-card p{
+    position:relative;
+    z-index:1;
+    margin-top:12px;
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.62;
+  }
+
+  .project-footer{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:auto;
+    padding-top:18px;
+  }
+
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    min-height:25px;
+    padding:0 9px;
+    border:1px solid rgba(49,90,64,.2);
+    border-radius:999px;
+    background:rgba(49,90,64,.06);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10px;
+    font-weight:500;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .chip.gold{
+    border-color:rgba(167,119,69,.28);
+    background:rgba(167,119,69,.08);
+    color:var(--gold);
+  }
+
+  .chip.muted{
+    border-color:rgba(145,136,122,.26);
+    background:rgba(145,136,122,.07);
+    color:var(--muted);
+  }
+
+  .project-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:18px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    color:var(--accent);
+    border-bottom:1px solid rgba(49,90,64,.22);
+    width:max-content;
+  }
+
+  .project-link:hover{
+    border-bottom-color:var(--accent);
+  }
+
   .pub-list{
     display:grid;
     gap:14px;
@@ -545,9 +770,9 @@
 
   .pub{
     padding:24px;
-    border:1px solid rgba(222,212,195,.82);
+    border:1px solid rgba(222,212,195,.84);
     border-radius:var(--radius-sm);
-    background:rgba(255,253,248,.58);
+    background:rgba(255,253,248,.6);
   }
 
   .pub .title{
@@ -569,39 +794,23 @@
     margin-top:14px;
   }
 
-  .tag{
-    display:inline-flex;
-    align-items:center;
-    min-height:25px;
-    padding:0 9px;
-    border:1px solid rgba(49,90,64,.22);
-    border-radius:999px;
-    background:rgba(49,90,64,.06);
-    font-family:"IBM Plex Mono", monospace;
-    font-size:10px;
-    font-weight:500;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--accent);
-  }
-
   .scholar-link{
     margin-top:22px;
   }
 
   .contact-panel{
     display:grid;
-    grid-template-columns:minmax(0, 1fr) 260px;
+    grid-template-columns:minmax(0, 1fr) 270px;
     gap:34px;
     align-items:start;
   }
 
   .contact-box{
     padding:24px;
-    border:1px solid rgba(222,212,195,.82);
+    border:1px solid rgba(222,212,195,.84);
     border-radius:var(--radius-sm);
     background:
-      linear-gradient(145deg, rgba(49,90,64,.075), rgba(255,253,248,.7));
+      linear-gradient(145deg, rgba(49,90,64,.075), rgba(255,253,248,.72));
   }
 
   .contact-box p{
@@ -631,16 +840,16 @@
     gap:16px;
     min-height:42px;
     padding:0 14px;
-    border:1px solid rgba(222,212,195,.82);
+    border:1px solid rgba(222,212,195,.84);
     border-radius:999px;
-    background:rgba(255,253,248,.58);
+    background:rgba(255,253,248,.6);
     color:var(--muted);
     transition:transform .2s ease, color .2s ease, background .2s ease;
   }
 
   .links a::after{
     content:"↗";
-    color:var(--accent-2);
+    color:var(--accent-soft);
   }
 
   .links a:hover{
@@ -684,15 +893,15 @@
     border-radius:8px;
   }
 
-  @media (max-width:900px){
+  @media (max-width:980px){
     .hero{
       grid-template-columns:1fr;
-      gap:38px;
-      padding:72px 0 52px;
+      gap:40px;
+      padding:72px 0 54px;
     }
 
     .hero-card{
-      min-height:430px;
+      min-height:470px;
     }
 
     .section-grid{
@@ -708,12 +917,24 @@
       padding:32px;
     }
 
+    .research-feature{
+      grid-template-columns:1fr;
+    }
+
+    .project-grid{
+      grid-template-columns:1fr;
+    }
+
     .contact-panel{
       grid-template-columns:1fr;
     }
+
+    .toolkit{
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
   }
 
-  @media (max-width:680px){
+  @media (max-width:720px){
     body{
       font-size:17px;
     }
@@ -733,7 +954,8 @@
     nav ul{
       width:100%;
       justify-content:space-between;
-      gap:4px;
+      gap:3px;
+      flex-wrap:wrap;
     }
 
     nav a.link{
@@ -763,12 +985,12 @@
     }
 
     .hero-card{
-      min-height:390px;
+      min-height:440px;
       border-radius:20px;
     }
 
-    .signal-visual{
-      inset:34px 20px 126px;
+    .science-visual{
+      inset:28px 18px 140px;
     }
 
     .hero-card-label{
@@ -800,10 +1022,20 @@
       border-radius:20px;
     }
 
+    .toolkit{
+      grid-template-columns:1fr;
+    }
+
+    .research-feature,
     .research-item,
+    .project-card,
     .pub,
     .contact-box{
       padding:20px;
+    }
+
+    .research-figure{
+      min-height:280px;
     }
 
     footer{
@@ -866,9 +1098,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Nasim Mortazavi",
-  "jobTitle": "Computational Neuroscientist",
+  "jobTitle": "Computational Scientist",
   "email": "mailto:nmortaza@uwo.ca",
-  "url": "",
   "sameAs": [
     "https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en",
     "https://github.com/Nasim-photon",
@@ -876,11 +1107,17 @@
   ],
   "knowsAbout": [
     "Computational neuroscience",
+    "AI for health",
     "Human hippocampus",
     "Sharp-wave ripples",
     "Associative memory",
     "Spatial learning",
-    "Intracranial SEEG"
+    "Intracranial SEEG",
+    "Signal processing",
+    "Mixed-effects modeling",
+    "Machine learning",
+    "Deep learning",
+    "Scientific visualization"
   ]
 }
 </script>
@@ -895,7 +1132,7 @@
       <span class="brand-mark">NM</span>
       <span class="brand-text">
         <span class="brand-name">Nasim Mortazavi</span>
-        <span class="brand-role">Computational Neuroscience</span>
+        <span class="brand-role">Computational Scientist · Neuroscience & AI for Health</span>
       </span>
     </a>
 
@@ -903,6 +1140,7 @@
       <ul>
         <li><a class="link" href="#about">About</a></li>
         <li><a class="link" href="#research">Research</a></li>
+        <li><a class="link" href="#projects">Projects</a></li>
         <li><a class="link" href="#publications">Publications</a></li>
         <li><a class="link" href="#contact">Contact</a></li>
       </ul>
@@ -915,38 +1153,59 @@
 
   <section class="hero" aria-label="Introduction">
     <div>
-      <div class="eyebrow">Computational Neuroscience · London, Ontario</div>
+      <div class="eyebrow">Computational Scientist · Neuroscience & AI for Health</div>
 
-      <h1>Nasim Mortazavi</h1>
+      <h1>
+        Nasim
+        <span class="hero-title-break">Mortazavi</span>
+      </h1>
 
       <p class="subtitle">
-        I study how the human hippocampus <span class="accent">writes memory into place</span> —
-        reading sharp-wave ripples directly from the living brain.
+        I work at the intersection of human neuroscience, health data, and AI —
+        building computational tools to understand complex biological signals and
+        <span class="accent">serve human health with scientific rigor.</span>
       </p>
 
       <div class="hero-actions">
-        <a class="button primary" href="#research">Explore research</a>
-        <a class="button secondary" href="mailto:nmortaza@uwo.ca">Contact me</a>
+        <a class="button primary" href="#projects">View projects</a>
+        <a class="button secondary" href="https://github.com/Nasim-photon" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="button secondary" href="mailto:nmortaza@uwo.ca">Contact</a>
+      </div>
+
+      <div class="hero-tags" aria-label="Core technical skills">
+        <span>Python</span>
+        <span>R</span>
+        <span>MATLAB</span>
+        <span>Signal processing</span>
+        <span>GLMMs</span>
+        <span>Deep learning</span>
+        <span>SEEG</span>
+        <span>Scientific visualization</span>
       </div>
     </div>
 
-    <aside class="hero-card" aria-label="Scientific visual summary">
-      <div class="signal-visual" aria-hidden="true">
-        <svg viewBox="0 0 520 420" role="img" aria-label="Abstract hippocampal ripple visualization">
+    <aside class="hero-card" aria-label="Scientific and computational visual summary">
+      <div class="science-visual" aria-hidden="true">
+        <svg viewBox="0 0 540 450" role="img" aria-label="Abstract hippocampus, ripple, and AI health data visualization">
           <defs>
             <linearGradient id="hippoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#315a40" stop-opacity=".92"/>
-              <stop offset="55%" stop-color="#6f8f73" stop-opacity=".72"/>
+              <stop offset="0%" stop-color="#315a40" stop-opacity=".95"/>
+              <stop offset="55%" stop-color="#6f8f73" stop-opacity=".76"/>
               <stop offset="100%" stop-color="#a77745" stop-opacity=".72"/>
             </linearGradient>
 
-            <radialGradient id="softGlow" cx="50%" cy="50%" r="50%">
+            <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#315a40" stop-opacity=".82"/>
+              <stop offset="100%" stop-color="#a77745" stop-opacity=".82"/>
+            </linearGradient>
+
+            <radialGradient id="softGlow" cx="50%" cy="48%" r="52%">
               <stop offset="0%" stop-color="#6f8f73" stop-opacity=".22"/>
               <stop offset="100%" stop-color="#6f8f73" stop-opacity="0"/>
             </radialGradient>
 
             <filter id="blurGlow" x="-40%" y="-40%" width="180%" height="180%">
-              <feGaussianBlur stdDeviation="10" result="blur"/>
+              <feGaussianBlur stdDeviation="9" result="blur"/>
               <feMerge>
                 <feMergeNode in="blur"/>
                 <feMergeNode in="SourceGraphic"/>
@@ -954,16 +1213,16 @@
             </filter>
           </defs>
 
-          <circle cx="260" cy="210" r="174" fill="url(#softGlow)"/>
+          <circle cx="245" cy="205" r="176" fill="url(#softGlow)"/>
 
           <path
-            d="M151 254
-               C101 229 82 179 108 137
-               C136 92 204 80 262 104
-               C317 126 372 124 407 158
-               C446 196 431 256 382 287
-               C331 319 253 315 205 292
-               C183 281 169 267 151 254Z"
+            d="M145 255
+               C95 230 78 178 106 137
+               C136 92 204 82 263 105
+               C320 128 374 124 412 160
+               C450 196 436 254 386 288
+               C334 322 256 318 208 294
+               C184 282 166 267 145 255Z"
             fill="none"
             stroke="url(#hippoGradient)"
             stroke-width="18"
@@ -974,13 +1233,13 @@
           />
 
           <path
-            d="M156 250
-               C111 228 95 183 119 147
-               C145 108 205 101 256 121
-               C311 143 365 140 396 169
-               C429 201 416 247 374 273
-               C326 302 257 299 214 279
-               C192 269 176 258 156 250Z"
+            d="M153 250
+               C110 228 96 184 120 148
+               C146 109 205 102 258 122
+               C313 143 367 141 398 170
+               C431 201 418 248 374 276
+               C326 306 258 302 216 281
+               C194 270 175 258 153 250Z"
             fill="none"
             stroke="#fffdf8"
             stroke-width="7"
@@ -990,19 +1249,19 @@
           />
 
           <path
-            class="ripple-path"
-            d="M80 213
-               C96 213 96 185 112 185
-               C128 185 128 243 144 243
-               C160 243 160 174 176 174
-               C192 174 192 254 208 254
-               C224 254 224 167 240 167
-               C256 167 256 254 272 254
-               C288 254 288 173 304 173
-               C320 173 320 244 336 244
-               C352 244 352 188 368 188
-               C384 188 384 218 400 218
-               C416 218 416 210 440 210"
+            class="draw-line"
+            d="M70 215
+               C86 215 86 187 102 187
+               C118 187 118 244 134 244
+               C150 244 150 174 166 174
+               C182 174 182 256 198 256
+               C214 256 214 166 230 166
+               C246 166 246 256 262 256
+               C278 256 278 174 294 174
+               C310 174 310 244 326 244
+               C342 244 342 188 358 188
+               C374 188 374 219 390 219
+               C406 219 406 211 430 211"
             fill="none"
             stroke="#315a40"
             stroke-width="5"
@@ -1011,7 +1270,7 @@
           />
 
           <path
-            d="M80 213 H440"
+            d="M70 215 H430"
             fill="none"
             stroke="#cfc1ad"
             stroke-width="1.2"
@@ -1020,39 +1279,61 @@
           />
 
           <g fill="#315a40">
-            <circle cx="151" cy="254" r="5"/>
-            <circle cx="262" cy="104" r="5"/>
-            <circle cx="382" cy="287" r="5"/>
+            <circle cx="148" cy="253" r="5"/>
+            <circle cx="264" cy="104" r="5"/>
+            <circle cx="384" cy="288" r="5"/>
+          </g>
+
+          <g stroke="#315a40" stroke-width="2" opacity=".76">
+            <line x1="148" y1="253" x2="118" y2="318"/>
+            <line x1="264" y1="104" x2="275" y2="54"/>
+            <line x1="384" y1="288" x2="427" y2="332"/>
           </g>
 
           <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#716b60">
-            <text x="135" y="290">CA1</text>
-            <text x="250" y="82">SEEG</text>
-            <text x="346" y="323">Ripple</text>
+            <text x="92" y="339">CA1 / SEEG</text>
+            <text x="246" y="45">Ripple signal</text>
+            <text x="386" y="353">Memory</text>
+          </g>
+
+          <g transform="translate(76 356)">
+            <rect x="0" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
+            <rect x="102" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
+            <rect x="204" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
+            <rect x="306" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
+
+            <path d="M82 17 H102" stroke="url(#dataGradient)" stroke-width="2"/>
+            <path d="M184 17 H204" stroke="url(#dataGradient)" stroke-width="2"/>
+            <path d="M286 17 H306" stroke="url(#dataGradient)" stroke-width="2"/>
+
+            <text x="19" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">Signal</text>
+            <text x="124" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">Model</text>
+            <text x="224" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">AI</text>
+            <text x="324" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">Health</text>
           </g>
         </svg>
       </div>
 
       <div class="hero-card-label">
         <div class="label-top">
-          <span>Human hippocampal dynamics</span>
+          <span>Human data · AI · health</span>
           <span class="label-line"></span>
         </div>
 
         <div class="metric-row">
           <div class="metric">
             <strong>SEEG</strong>
-            <span>Intracranial recordings</span>
+            <span>Human neural signals</span>
           </div>
 
           <div class="metric">
-            <strong>CA1</strong>
-            <span>Hippocampal subfield</span>
+            <strong>Models</strong>
+            <span>Statistical & ML tools</span>
           </div>
 
           <div class="metric">
-            <strong>Memory</strong>
-            <span>Associative learning</span>
+            <strong>Health</strong>
+            <span>Human-centered AI</span>
           </div>
         </div>
       </div>
@@ -1064,24 +1345,53 @@
       <div class="section-kicker">
         <h2>About</h2>
         <p class="section-note">
-          Human electrophysiology, spatial learning, and statistical modeling.
+          Physics-trained, neuroscience-driven, and computationally focused.
         </p>
       </div>
 
       <div class="prose">
         <p>
-          I am a computational neuroscientist working at the intersection of human electrophysiology,
-          spatial learning, and statistical modeling. My research uses intracranial SEEG recordings
-          from the human hippocampus to ask how memories of place and association are formed and
-          consolidated during learning.
+          I am a computational scientist trained across physics, neuroscience, and data-driven modeling.
+          My work is guided by a long-standing fascination with how complex systems work — from physical
+          systems to the human brain — and by the belief that rigorous science and modern AI can be used
+          to improve human life.
         </p>
 
         <p>
-          My background spans physics and neuroscience: I hold a master's in computational physics
-          and trained originally in theoretical physics before moving into clinical and computational
-          neuroscience. I build the full analysis stack for my work — signal processing in MATLAB,
-          mixed-effects modeling in R, and electrophysiology pipelines in Python.
+          My current research studies human associative memory using intracranial SEEG recordings from
+          the hippocampus, with a focus on sharp-wave ripples, spatial learning, and statistical modeling
+          of neural and behavioral data.
         </p>
+
+        <p>
+          Beyond academic neuroscience, I build computational tools for health-related data: reproducible
+          analysis pipelines, mixed-effects models, machine-learning workflows, neural-signal classifiers,
+          and interactive visualization tools. I am interested in AI not as a trend, but as a scientific
+          tool — one that can help make complex biological and clinical data more useful, interpretable,
+          and actionable for human health.
+        </p>
+
+        <div class="toolkit" aria-label="Technical toolkit">
+          <div class="tool">
+            <strong>Programming</strong>
+            Python · R · MATLAB
+          </div>
+
+          <div class="tool">
+            <strong>Modeling</strong>
+            GLMMs · statistics · inference
+          </div>
+
+          <div class="tool">
+            <strong>AI / ML</strong>
+            1D-CNNs · classifiers · agents
+          </div>
+
+          <div class="tool">
+            <strong>Neural data</strong>
+            SEEG · ripples · visualization
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1089,39 +1399,272 @@
   <section id="research" class="section-card">
     <div class="section-grid">
       <div class="section-kicker">
-        <h2>Research</h2>
+        <h2>Academic Research</h2>
         <p class="section-note">
-          A focused program on hippocampal ripples, learning, and anatomical precision.
+          Human hippocampal dynamics, associative memory, and learning circuitry.
         </p>
       </div>
 
-      <div class="research-list">
-        <article class="research-item">
-          <h3>Sharp-wave ripples and associative spatial learning</h3>
-          <div class="meta">Human CA1 · SEEG · Hippocampal dynamics</div>
-          <p>
-            How ripple activity in human CA1 reorganizes during learning: post-learning ripple-rate
-            ramping, posterior predominance, and the link between ripple rate and behavioral performance.
-          </p>
-        </article>
+      <div>
+        <div class="research-feature">
+          <div class="research-figure" aria-label="Original schematic of hippocampal learning circuitry">
+            <svg viewBox="0 0 520 420" role="img" aria-label="Human hippocampus, SEEG contacts, ripple activity, and learning circuitry">
+              <defs>
+                <linearGradient id="researchHippo" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#315a40" stop-opacity=".95"/>
+                  <stop offset="58%" stop-color="#6f8f73" stop-opacity=".72"/>
+                  <stop offset="100%" stop-color="#a77745" stop-opacity=".72"/>
+                </linearGradient>
 
-        <article class="research-item">
-          <h3>Localizing electrodes within hippocampal subfields</h3>
-          <div class="meta">HippUnfold · CT–MRI coregistration</div>
-          <p>
-            A quantitative method for placing intracranial contacts within hippocampal subfields,
-            resolving CA1 channel assignment across subjects.
-          </p>
-        </article>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L0,6 L9,3 z" fill="#315a40"/>
+                </marker>
+              </defs>
 
-        <article class="research-item">
-          <h3>Anterior–posterior functional differentiation</h3>
-          <div class="meta">Long-axis organization</div>
-          <p>
-            How position along the hippocampal long axis shapes ripple dynamics and the encoding
-            of spatial zones.
-          </p>
-        </article>
+              <rect x="24" y="30" width="472" height="360" rx="28" fill="#fffdf8" stroke="#ded4c3"/>
+
+              <text x="56" y="72" font-family="IBM Plex Mono, monospace" font-size="12" fill="#716b60" letter-spacing="1">
+                HUMAN HIPPOCAMPAL LEARNING CIRCUITRY
+              </text>
+
+              <path
+                d="M126 216
+                   C86 194 74 152 96 120
+                   C121 84 172 79 219 96
+                   C264 112 307 110 337 136
+                   C368 163 359 203 324 228
+                   C284 257 223 256 185 239
+                   C164 230 147 225 126 216Z"
+                fill="none"
+                stroke="url(#researchHippo)"
+                stroke-width="16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M131 213
+                   C99 195 91 158 108 132
+                   C130 99 174 97 217 111
+                   C263 127 304 125 328 147
+                   C353 169 344 199 315 219
+                   C279 242 229 243 195 228
+                   C171 218 153 220 131 213Z"
+                fill="none"
+                stroke="#fbf8f1"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <g fill="#315a40">
+                <circle cx="139" cy="210" r="5"/>
+                <circle cx="176" cy="103" r="5"/>
+                <circle cx="232" cy="113" r="5"/>
+                <circle cx="312" cy="142" r="5"/>
+              </g>
+
+              <text x="122" y="268" font-family="IBM Plex Mono, monospace" font-size="12" fill="#315a40">SEEG contacts</text>
+              <text x="245" y="98" font-family="IBM Plex Mono, monospace" font-size="12" fill="#315a40">CA1</text>
+
+              <path
+                d="M70 305
+                   C83 305 83 286 96 286
+                   C109 286 109 326 122 326
+                   C135 326 135 277 148 277
+                   C161 277 161 333 174 333
+                   C187 333 187 273 200 273
+                   C213 273 213 333 226 333
+                   C239 333 239 279 252 279
+                   C265 279 265 323 278 323
+                   C291 323 291 293 304 293
+                   C317 293 317 307 334 307"
+                fill="none"
+                stroke="#315a40"
+                stroke-width="3.5"
+                stroke-linecap="round"
+              />
+
+              <text x="70" y="358" font-family="IBM Plex Mono, monospace" font-size="12" fill="#716b60">
+                sharp-wave ripple activity
+              </text>
+
+              <g>
+                <rect x="370" y="106" width="94" height="42" rx="14" fill="#f8f2e8" stroke="#ded4c3"/>
+                <text x="391" y="132" font-family="IBM Plex Mono, monospace" font-size="11" fill="#315a40">Context</text>
+
+                <rect x="370" y="182" width="94" height="42" rx="14" fill="#f8f2e8" stroke="#ded4c3"/>
+                <text x="392" y="208" font-family="IBM Plex Mono, monospace" font-size="11" fill="#315a40">Color</text>
+
+                <rect x="370" y="258" width="94" height="42" rx="14" fill="#f8f2e8" stroke="#ded4c3"/>
+                <text x="390" y="284" font-family="IBM Plex Mono, monospace" font-size="11" fill="#315a40">Memory</text>
+
+                <path d="M330 150 C350 140 352 127 370 127" fill="none" stroke="#315a40" stroke-width="2" marker-end="url(#arrow)"/>
+                <path d="M330 205 C350 203 352 203 370 203" fill="none" stroke="#315a40" stroke-width="2" marker-end="url(#arrow)"/>
+                <path d="M330 260 C350 266 352 279 370 279" fill="none" stroke="#315a40" stroke-width="2" marker-end="url(#arrow)"/>
+              </g>
+            </svg>
+          </div>
+
+          <div>
+            <h3>How does the human hippocampus organize learning?</h3>
+            <p>
+              My academic work asks how hippocampal sharp-wave ripples reorganize during associative
+              spatial learning, and how this activity relates to behavioral performance, anatomical
+              location, and memory formation.
+            </p>
+            <p>
+              The central focus is human CA1: a hippocampal subfield where intracranial recordings
+              allow direct measurement of fast neural events during learning.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-list">
+          <article class="research-item">
+            <h3>Sharp-wave ripples and associative spatial learning</h3>
+            <div class="meta">Human CA1 · SEEG · Hippocampal dynamics</div>
+            <p>
+              How ripple activity in human CA1 reorganizes during learning: post-learning ripple-rate
+              ramping, posterior predominance, and the link between ripple rate and behavioral performance.
+            </p>
+          </article>
+
+          <article class="research-item">
+            <h3>Localizing electrodes within hippocampal subfields</h3>
+            <div class="meta">HippUnfold · CT–MRI coregistration · Anatomical precision</div>
+            <p>
+              A quantitative method for placing intracranial contacts within hippocampal subfields,
+              resolving CA1 channel assignment across subjects.
+            </p>
+          </article>
+
+          <article class="research-item">
+            <h3>Anterior–posterior functional differentiation</h3>
+            <div class="meta">Long-axis organization · Spatial learning · Ripple dynamics</div>
+            <p>
+              How position along the hippocampal long axis shapes ripple dynamics and the encoding
+              of spatial zones.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section-card">
+    <div class="section-grid">
+      <div class="section-kicker">
+        <h2>Projects</h2>
+        <p class="section-note">
+          Scientific software, health-data modeling, AI workflows, and neural-signal tools.
+        </p>
+      </div>
+
+      <div>
+        <p class="project-intro">
+          These projects reflect the applied side of my work: building tools that transform complex
+          health, behavioral, and electrophysiological data into interpretable models, visualizations,
+          and reproducible workflows.
+        </p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>GLMMs for health and behavioral data</h3>
+            <p>
+              A statistical modeling project focused on generalized linear mixed-effects models for
+              repeated-measures health and behavioral datasets. The emphasis is reproducible analysis,
+              subject-level variability, interpretable model outputs, and publication-quality visualization.
+            </p>
+            <a class="project-link" href="https://github.com/Nasim-photon" target="_blank" rel="noopener noreferrer">
+              GitHub profile →
+            </a>
+            <div class="project-footer">
+              <span class="chip">R</span>
+              <span class="chip">GLMM</span>
+              <span class="chip">Health data</span>
+              <span class="chip gold">Statistics</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>1D-CNN for ripple classification</h3>
+            <p>
+              A Python-based deep learning pipeline for classifying hippocampal ripple events from
+              one-dimensional electrophysiological signals. The project includes signal preprocessing,
+              model training, evaluation workflows, and comparison with rule-based ripple detection.
+            </p>
+            <div class="project-footer">
+              <span class="chip">Python</span>
+              <span class="chip">1D-CNN</span>
+              <span class="chip">Deep learning</span>
+              <span class="chip muted">GitHub coming soon</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Ripple-Agent</h3>
+            <p>
+              An AI-assisted research workflow for organizing ripple analysis, summarizing outputs,
+              checking pipeline steps, and supporting reproducible electrophysiology analysis. The goal
+              is to make complex ripple-analysis workflows easier to inspect, document, and reuse.
+            </p>
+            <div class="project-footer">
+              <span class="chip">Python</span>
+              <span class="chip">AI agent</span>
+              <span class="chip">Neuroscience</span>
+              <span class="chip muted">In development</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Ripple visualization GUI</h3>
+            <p>
+              An interactive Python GUI for visualizing ripple detections across time, channels, and
+              hippocampal anatomy. The tool supports inspection of spatial-temporal ripple patterns and
+              helps connect signal-level analysis with anatomical interpretation.
+            </p>
+            <a class="project-link" href="https://github.com/Nasim-photon" target="_blank" rel="noopener noreferrer">
+              GitHub profile →
+            </a>
+            <div class="project-footer">
+              <span class="chip">Python</span>
+              <span class="chip">GUI</span>
+              <span class="chip">Visualization</span>
+              <span class="chip gold">SEEG</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>AI workflow agent</h3>
+            <p>
+              A personal AI-agent project for tracking opportunities, organizing professional materials,
+              and supporting structured decision-making. The project demonstrates practical automation,
+              LLM-based workflow design, and human-in-the-loop productivity tools.
+            </p>
+            <div class="project-footer">
+              <span class="chip">Python</span>
+              <span class="chip">LLM tools</span>
+              <span class="chip">Automation</span>
+              <span class="chip muted">Personal project</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Reproducible neuroscience pipelines</h3>
+            <p>
+              End-to-end analysis workflows for human intracranial electrophysiology, including signal
+              preprocessing, ripple detection, behavioral alignment, mixed-effects modeling, and
+              publication-ready figures.
+            </p>
+            <div class="project-footer">
+              <span class="chip">MATLAB</span>
+              <span class="chip">R</span>
+              <span class="chip">Python</span>
+              <span class="chip gold">Research software</span>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -1131,7 +1674,7 @@
       <div class="section-kicker">
         <h2>Publications</h2>
         <p class="section-note">
-          Manuscripts, chapters, and ongoing work.
+          Manuscripts, chapters, and ongoing academic work.
         </p>
       </div>
 
@@ -1145,8 +1688,9 @@
               Mortazavi, N., et al. <em>In preparation.</em>
             </div>
             <div class="tag-row">
-              <span class="tag">First author</span>
-              <span class="tag">2026</span>
+              <span class="chip">First author</span>
+              <span class="chip">2026</span>
+              <span class="chip gold">Human SEEG</span>
             </div>
           </article>
 
@@ -1158,8 +1702,9 @@
               Mortazavi, N., et al. <em>In preparation.</em>
             </div>
             <div class="tag-row">
-              <span class="tag">First author</span>
-              <span class="tag">2026</span>
+              <span class="chip">First author</span>
+              <span class="chip">2026</span>
+              <span class="chip gold">Hippocampal subfields</span>
             </div>
           </article>
 
@@ -1171,7 +1716,7 @@
               Oxford University Press. [Add full chapter title &amp; year.]
             </div>
             <div class="tag-row">
-              <span class="tag">Book chapter</span>
+              <span class="chip">Book chapter</span>
             </div>
           </article>
         </div>
@@ -1190,15 +1735,16 @@
       <div class="section-kicker">
         <h2>Contact</h2>
         <p class="section-note">
-          Open to research, health data science, and clinical neuroscience opportunities.
+          Open to roles in computational science, AI for health, health data science, and clinical neuroscience.
         </p>
       </div>
 
       <div class="contact-panel">
         <div class="contact-box">
           <p>
-            I am open to roles in health data science, clinical neuroscience, computational neuroscience,
-            and translational research.
+            I am open to research and industry roles involving computational science, AI for health,
+            health data analysis, clinical neuroscience, scientific software, and interpretable modeling
+            of complex biological data.
           </p>
 
           <a class="email-link" href="mailto:nmortaza@uwo.ca">
@@ -1219,7 +1765,7 @@
 
   <footer>
     <span class="footer-mark">© 2026 Nasim Mortazavi</span>
-    <span>Built with care · No frameworks · Scalable graphics</span>
+    <span>Computational science · Neuroscience · AI for health</span>
   </footer>
 </main>
 
