@@ -3,223 +3,1225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nasim Mortazavi</title>
+<title>Nasim Mortazavi | Computational Neuroscience</title>
+<meta name="description" content="Nasim Mortazavi is a computational neuroscientist studying human hippocampal sharp-wave ripples, associative memory, spatial learning, and intracranial SEEG recordings.">
+<meta name="author" content="Nasim Mortazavi">
+<meta name="theme-color" content="#faf7ef">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --bg:#faf8f3;
-    --ink:#1c1b17;
-    --muted:#6e6a60;
-    --line:#d8d2c4;
-    --accent:#3a5a40;
-    --accent-soft:#6b8f71;
-    --maxw:680px;
+    --bg:#fbf8f1;
+    --bg-2:#f2eadc;
+    --paper:#fffdf8;
+    --paper-soft:#f7f1e7;
+    --ink:#171511;
+    --ink-soft:#2b2923;
+    --muted:#716b60;
+    --muted-2:#8b8375;
+    --line:#ded4c3;
+    --line-strong:#cfc1ad;
+    --accent:#315a40;
+    --accent-2:#6f8f73;
+    --accent-3:#a77745;
+    --shadow:0 24px 70px rgba(47, 38, 24, .12);
+    --shadow-soft:0 12px 36px rgba(47, 38, 24, .08);
+    --radius:24px;
+    --radius-sm:14px;
+    --maxw:1120px;
+    --content:720px;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
   body{
-    font-family:"Newsreader",Georgia,serif;
+    min-height:100vh;
+    font-family:"Newsreader", Georgia, serif;
     font-size:18px;
-    line-height:1.7;
+    line-height:1.72;
     color:var(--ink);
-    background:var(--bg);
+    background:
+      radial-gradient(circle at 10% 0%, rgba(111,143,115,.16), transparent 34rem),
+      radial-gradient(circle at 92% 14%, rgba(167,119,69,.14), transparent 30rem),
+      linear-gradient(180deg, var(--bg), #f8f2e8 52%, var(--bg));
     -webkit-font-smoothing:antialiased;
-    padding:0 24px;
+    text-rendering:optimizeLegibility;
   }
-  .wrap{max-width:var(--maxw);margin:0 auto}
 
-  /* nav */
-  nav{
-    position:sticky;top:0;z-index:10;
-    background:var(--bg);
-    border-bottom:1px solid var(--line);
-    margin:0 -24px 0;
-    padding:0 24px;
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.23;
+    background-image:
+      linear-gradient(rgba(49,90,64,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(49,90,64,.06) 1px, transparent 1px);
+    background-size:46px 46px;
+    mask-image:linear-gradient(to bottom, black, transparent 72%);
   }
-  nav .wrap{
-    display:flex;justify-content:space-between;align-items:center;
-    padding:14px 0;
-  }
-  nav .home{
-    font-family:"IBM Plex Mono",monospace;
-    font-size:13px;letter-spacing:.04em;text-transform:uppercase;
-    color:var(--ink);text-decoration:none;
-  }
-  nav ul{display:flex;gap:22px;list-style:none}
-  nav a.link{
-    font-family:"IBM Plex Mono",monospace;
-    font-size:13px;letter-spacing:.02em;
-    color:var(--muted);text-decoration:none;
-    padding-bottom:2px;border-bottom:1px solid transparent;
-    transition:color .2s,border-color .2s;
-  }
-  nav a.link:hover{color:var(--accent);border-color:var(--accent)}
 
-  /* hero */
-  header.hero{padding:90px 0 64px}
-  .eyebrow{
-    font-family:"IBM Plex Mono",monospace;
-    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--accent-soft);margin-bottom:22px;
+  ::selection{
+    background:rgba(49,90,64,.18);
   }
-  h1{
-    font-family:"Fraunces",serif;
-    font-weight:500;
-    font-size:clamp(2.6rem,7vw,4rem);
-    line-height:1.04;
-    letter-spacing:-.01em;
-    margin-bottom:26px;
-  }
-  .lede{font-size:1.22rem;color:var(--ink);max-width:36ch}
-  .lede .accent{color:var(--accent);font-style:italic}
 
-  /* sections */
-  section{padding:54px 0;border-top:1px solid var(--line)}
-  h2{
-    font-family:"IBM Plex Mono",monospace;
-    font-size:12px;font-weight:500;
-    letter-spacing:.18em;text-transform:uppercase;
+  a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+
+  a:hover{
+    color:#203f2d;
+  }
+
+  .skip-link{
+    position:absolute;
+    left:20px;
+    top:-60px;
+    z-index:100;
+    background:var(--ink);
+    color:var(--paper);
+    padding:10px 14px;
+    border-radius:10px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:13px;
+    transition:top .2s ease;
+  }
+
+  .skip-link:focus{
+    top:18px;
+  }
+
+  .site-shell{
+    width:min(calc(100% - 40px), var(--maxw));
+    margin:0 auto;
+  }
+
+  .topbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    background:rgba(251,248,241,.82);
+    border-bottom:1px solid rgba(222,212,195,.72);
+  }
+
+  .nav-inner{
+    width:min(calc(100% - 40px), var(--maxw));
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    padding:16px 0;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+
+  .brand-mark{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--line-strong);
+    border-radius:50%;
+    background:linear-gradient(145deg, rgba(255,255,255,.74), rgba(242,234,220,.74));
+    box-shadow:0 8px 22px rgba(47,38,24,.08);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:var(--accent);
+  }
+
+  .brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+
+  .brand-name{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+  }
+
+  .brand-role{
+    margin-top:3px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px;
     color:var(--muted);
-    margin-bottom:28px;
-  }
-  p+p{margin-top:1.1rem}
-  a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s}
-  a:hover{border-color:var(--accent)}
-
-  /* research list */
-  .item{margin-bottom:30px}
-  .item:last-child{margin-bottom:0}
-  .item h3{
-    font-family:"Fraunces",serif;font-weight:500;
-    font-size:1.32rem;line-height:1.25;margin-bottom:6px;
-  }
-  .item .meta{
-    font-family:"IBM Plex Mono",monospace;
-    font-size:12.5px;color:var(--accent-soft);
-    letter-spacing:.02em;margin-bottom:8px;
-  }
-  .item p{color:var(--muted);font-size:1rem}
-
-  /* publications */
-  .pub{padding:18px 0;border-bottom:1px solid var(--line)}
-  .pub:last-child{border-bottom:none}
-  .pub .title{font-weight:500}
-  .pub .cite{font-size:.98rem;color:var(--muted);margin-top:3px}
-  .pub .tag{
-    display:inline-block;
-    font-family:"IBM Plex Mono",monospace;
-    font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--accent);border:1px solid var(--line);
-    border-radius:2px;padding:2px 7px;margin-top:8px;
+    letter-spacing:.04em;
   }
 
-  /* contact */
-  .links{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:"IBM Plex Mono",monospace;font-size:14px}
-  .links a{border:none;color:var(--muted)}
-  .links a:hover{color:var(--accent)}
-
-  footer{padding:40px 0 60px;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.03em}
-
-  @media (max-width:560px){
-    body{font-size:17px}
-    nav ul{gap:16px}
-    nav a.link{font-size:12px}
-    header.hero{padding:64px 0 48px}
-    .lede{font-size:1.12rem}
+  nav ul{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    list-style:none;
   }
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+  nav a.link{
+    display:inline-flex;
+    align-items:center;
+    min-height:36px;
+    padding:0 11px;
+    border-radius:999px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--muted);
+    transition:background .2s ease, color .2s ease, transform .2s ease;
+  }
+
+  nav a.link:hover{
+    color:var(--accent);
+    background:rgba(49,90,64,.075);
+    transform:translateY(-1px);
+  }
+
+  main{
+    position:relative;
+  }
+
+  .hero{
+    display:grid;
+    grid-template-columns:minmax(0, 1.05fr) minmax(320px, .85fr);
+    gap:56px;
+    align-items:center;
+    padding:92px 0 74px;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .eyebrow::before{
+    content:"";
+    width:34px;
+    height:1px;
+    background:var(--accent-2);
+  }
+
+  h1{
+    max-width:760px;
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:clamp(3.1rem, 8vw, 6.6rem);
+    line-height:.96;
+    letter-spacing:-.045em;
+    color:var(--ink);
+  }
+
+  .subtitle{
+    margin-top:26px;
+    max-width:620px;
+    font-size:clamp(1.24rem, 2.2vw, 1.55rem);
+    line-height:1.52;
+    color:var(--ink-soft);
+  }
+
+  .subtitle .accent{
+    color:var(--accent);
+    font-style:italic;
+  }
+
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:34px;
+  }
+
+  .button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:44px;
+    padding:0 18px;
+    border-radius:999px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px;
+    font-weight:500;
+    letter-spacing:.04em;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+
+  .button.primary{
+    color:#fffdf8;
+    background:var(--accent);
+    box-shadow:0 14px 26px rgba(49,90,64,.22);
+  }
+
+  .button.primary:hover{
+    color:#fffdf8;
+    transform:translateY(-2px);
+    box-shadow:0 18px 34px rgba(49,90,64,.26);
+  }
+
+  .button.secondary{
+    color:var(--accent);
+    border:1px solid var(--line-strong);
+    background:rgba(255,253,248,.64);
+  }
+
+  .button.secondary:hover{
+    background:rgba(49,90,64,.08);
+    transform:translateY(-2px);
+  }
+
+  .hero-card{
+    position:relative;
+    min-height:470px;
+    border:1px solid rgba(207,193,173,.85);
+    border-radius:var(--radius);
+    background:
+      linear-gradient(145deg, rgba(255,253,248,.88), rgba(246,238,225,.82)),
+      radial-gradient(circle at 50% 30%, rgba(111,143,115,.16), transparent 18rem);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+
+  .hero-card::before{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid rgba(207,193,173,.56);
+    border-radius:calc(var(--radius) - 8px);
+    pointer-events:none;
+  }
+
+  .hero-card::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    right:-80px;
+    top:-70px;
+    border-radius:50%;
+    background:rgba(167,119,69,.12);
+    filter:blur(2px);
+  }
+
+  .signal-visual{
+    position:absolute;
+    inset:44px 30px 120px;
+    display:grid;
+    place-items:center;
+  }
+
+  .signal-visual svg{
+    width:100%;
+    max-width:410px;
+    height:auto;
+    overflow:visible;
+  }
+
+  .ripple-path{
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    animation:drawSignal 3.6s ease forwards;
+  }
+
+  @keyframes drawSignal{
+    to{stroke-dashoffset:0;}
+  }
+
+  .hero-card-label{
+    position:absolute;
+    left:30px;
+    right:30px;
+    bottom:30px;
+    display:grid;
+    gap:12px;
+  }
+
+  .label-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .label-line{
+    height:1px;
+    flex:1;
+    background:var(--line);
+  }
+
+  .metric-row{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+  }
+
+  .metric{
+    min-height:82px;
+    padding:14px 12px;
+    border:1px solid rgba(222,212,195,.8);
+    border-radius:16px;
+    background:rgba(255,253,248,.64);
+  }
+
+  .metric strong{
+    display:block;
+    font-family:"Fraunces", Georgia, serif;
+    font-size:1.15rem;
+    line-height:1.1;
+    color:var(--accent);
+  }
+
+  .metric span{
+    display:block;
+    margin-top:8px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10px;
+    line-height:1.45;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  section{
+    scroll-margin-top:86px;
+  }
+
+  .section-card{
+    margin:28px 0;
+    padding:42px;
+    border:1px solid rgba(222,212,195,.82);
+    border-radius:var(--radius);
+    background:rgba(255,253,248,.72);
+    box-shadow:var(--shadow-soft);
+  }
+
+  .section-grid{
+    display:grid;
+    grid-template-columns:240px minmax(0, 1fr);
+    gap:48px;
+    align-items:start;
+  }
+
+  .section-kicker{
+    position:sticky;
+    top:98px;
+  }
+
+  h2{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .section-note{
+    margin-top:12px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    line-height:1.65;
+    color:var(--muted);
+  }
+
+  .prose{
+    max-width:var(--content);
+  }
+
+  .prose p{
+    color:var(--ink-soft);
+  }
+
+  .prose p + p{
+    margin-top:1.18rem;
+  }
+
+  .prose a{
+    border-bottom:1px solid rgba(49,90,64,.24);
+  }
+
+  .prose a:hover{
+    border-bottom-color:var(--accent);
+  }
+
+  .research-list{
+    display:grid;
+    gap:18px;
+  }
+
+  .research-item{
+    position:relative;
+    padding:24px 24px 24px 28px;
+    border:1px solid rgba(222,212,195,.82);
+    border-radius:var(--radius-sm);
+    background:
+      linear-gradient(135deg, rgba(255,253,248,.82), rgba(247,241,231,.64));
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+
+  .research-item:hover{
+    transform:translateY(-3px);
+    border-color:rgba(49,90,64,.28);
+    box-shadow:0 16px 34px rgba(47,38,24,.09);
+  }
+
+  .research-item::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:22px;
+    bottom:22px;
+    width:3px;
+    border-radius:999px;
+    background:linear-gradient(180deg, var(--accent), var(--accent-2));
+  }
+
+  .research-item h3{
+    font-family:"Fraunces", Georgia, serif;
+    font-size:1.36rem;
+    font-weight:600;
+    line-height:1.22;
+    letter-spacing:-.01em;
+    color:var(--ink);
+  }
+
+  .meta{
+    margin-top:8px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    font-weight:500;
+    line-height:1.6;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+  }
+
+  .research-item p{
+    margin-top:10px;
+    font-size:1rem;
+    line-height:1.65;
+    color:var(--muted);
+  }
+
+  .pub-list{
+    display:grid;
+    gap:14px;
+  }
+
+  .pub{
+    padding:24px;
+    border:1px solid rgba(222,212,195,.82);
+    border-radius:var(--radius-sm);
+    background:rgba(255,253,248,.58);
+  }
+
+  .pub .title{
+    font-weight:600;
+    line-height:1.45;
+    color:var(--ink);
+  }
+
+  .pub .cite{
+    margin-top:6px;
+    font-size:1rem;
+    color:var(--muted);
+  }
+
+  .tag-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+  }
+
+  .tag{
+    display:inline-flex;
+    align-items:center;
+    min-height:25px;
+    padding:0 9px;
+    border:1px solid rgba(49,90,64,.22);
+    border-radius:999px;
+    background:rgba(49,90,64,.06);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10px;
+    font-weight:500;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .scholar-link{
+    margin-top:22px;
+  }
+
+  .contact-panel{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) 260px;
+    gap:34px;
+    align-items:start;
+  }
+
+  .contact-box{
+    padding:24px;
+    border:1px solid rgba(222,212,195,.82);
+    border-radius:var(--radius-sm);
+    background:
+      linear-gradient(145deg, rgba(49,90,64,.075), rgba(255,253,248,.7));
+  }
+
+  .contact-box p{
+    color:var(--ink-soft);
+  }
+
+  .email-link{
+    display:inline-flex;
+    margin-top:14px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:13px;
+    border-bottom:1px solid rgba(49,90,64,.26);
+  }
+
+  .links{
+    display:grid;
+    gap:10px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:13px;
+  }
+
+  .links a,
+  .links span{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    min-height:42px;
+    padding:0 14px;
+    border:1px solid rgba(222,212,195,.82);
+    border-radius:999px;
+    background:rgba(255,253,248,.58);
+    color:var(--muted);
+    transition:transform .2s ease, color .2s ease, background .2s ease;
+  }
+
+  .links a::after{
+    content:"↗";
+    color:var(--accent-2);
+  }
+
+  .links a:hover{
+    transform:translateY(-2px);
+    color:var(--accent);
+    background:rgba(49,90,64,.07);
+  }
+
+  .links span{
+    color:var(--muted-2);
+    cursor:not-allowed;
+  }
+
+  .links span::after{
+    content:"soon";
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted-2);
+  }
+
+  footer{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:42px 0 64px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    line-height:1.7;
+    letter-spacing:.04em;
+    color:var(--muted);
+  }
+
+  .footer-mark{
+    color:var(--accent);
+  }
+
+  :focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:4px;
+    border-radius:8px;
+  }
+
+  @media (max-width:900px){
+    .hero{
+      grid-template-columns:1fr;
+      gap:38px;
+      padding:72px 0 52px;
+    }
+
+    .hero-card{
+      min-height:430px;
+    }
+
+    .section-grid{
+      grid-template-columns:1fr;
+      gap:24px;
+    }
+
+    .section-kicker{
+      position:static;
+    }
+
+    .section-card{
+      padding:32px;
+    }
+
+    .contact-panel{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media (max-width:680px){
+    body{
+      font-size:17px;
+    }
+
+    .site-shell,
+    .nav-inner{
+      width:min(calc(100% - 28px), var(--maxw));
+    }
+
+    .nav-inner{
+      align-items:flex-start;
+      flex-direction:column;
+      gap:12px;
+      padding:14px 0;
+    }
+
+    nav ul{
+      width:100%;
+      justify-content:space-between;
+      gap:4px;
+    }
+
+    nav a.link{
+      padding:0 8px;
+      font-size:11px;
+    }
+
+    .brand-role{
+      display:none;
+    }
+
+    h1{
+      font-size:clamp(3rem, 16vw, 5rem);
+    }
+
+    .subtitle{
+      font-size:1.18rem;
+    }
+
+    .hero-actions{
+      flex-direction:column;
+      align-items:stretch;
+    }
+
+    .button{
+      width:100%;
+    }
+
+    .hero-card{
+      min-height:390px;
+      border-radius:20px;
+    }
+
+    .signal-visual{
+      inset:34px 20px 126px;
+    }
+
+    .hero-card-label{
+      left:20px;
+      right:20px;
+      bottom:20px;
+    }
+
+    .metric-row{
+      grid-template-columns:1fr;
+    }
+
+    .metric{
+      min-height:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .metric span{
+      margin-top:0;
+      text-align:right;
+    }
+
+    .section-card{
+      margin:20px 0;
+      padding:24px 18px;
+      border-radius:20px;
+    }
+
+    .research-item,
+    .pub,
+    .contact-box{
+      padding:20px;
+    }
+
+    footer{
+      flex-direction:column;
+      padding-bottom:42px;
+    }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{
+      scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+      animation:none!important;
+      transition:none!important;
+    }
+  }
+
+  @media print{
+    body{
+      background:#fff;
+      color:#000;
+    }
+
+    body::before,
+    .topbar,
+    .hero-card,
+    .hero-actions{
+      display:none;
+    }
+
+    .site-shell{
+      width:100%;
+      max-width:none;
+    }
+
+    .hero{
+      display:block;
+      padding:24px 0;
+    }
+
+    .section-card{
+      box-shadow:none;
+      border-color:#bbb;
+      break-inside:avoid;
+    }
+
+    a{
+      color:#000;
+      text-decoration:underline;
+    }
+  }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nasim Mortazavi",
+  "jobTitle": "Computational Neuroscientist",
+  "email": "mailto:nmortaza@uwo.ca",
+  "url": "",
+  "sameAs": [
+    "https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en",
+    "https://github.com/Nasim-photon",
+    "https://twitter.com/NasimMortazavi"
+  ],
+  "knowsAbout": [
+    "Computational neuroscience",
+    "Human hippocampus",
+    "Sharp-wave ripples",
+    "Associative memory",
+    "Spatial learning",
+    "Intracranial SEEG"
+  ]
+}
+</script>
 </head>
+
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
-  <div class="wrap">
-    <a class="home" href="#top">NM</a>
-    <ul>
-      <li><a class="link" href="#research">Research</a></li>
-      <li><a class="link" href="#publications">Publications</a></li>
-      <li><a class="link" href="#contact">Contact</a></li>
-    </ul>
+<header class="topbar">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Nasim Mortazavi home">
+      <span class="brand-mark">NM</span>
+      <span class="brand-text">
+        <span class="brand-name">Nasim Mortazavi</span>
+        <span class="brand-role">Computational Neuroscience</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#research">Research</a></li>
+        <li><a class="link" href="#publications">Publications</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<div class="wrap" id="top">
+<main id="main" class="site-shell">
+  <div id="top"></div>
 
-  <header class="hero">
-    <div class="eyebrow">Computational Neuroscience · London, Ontario</div>
-    <h1>Nasim Mortazavi</h1>
-    <p class="lede">I study how the human hippocampus <span class="accent">writes memory into place</span> — reading sharp-wave ripples directly from the living brain.</p>
-  </header>
+  <section class="hero" aria-label="Introduction">
+    <div>
+      <div class="eyebrow">Computational Neuroscience · London, Ontario</div>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>I am a computational neuroscientist working at the intersection of human electrophysiology, spatial learning, and statistical modeling. My research uses intracranial (SEEG) recordings from the human hippocampus to ask how memories of place and association are formed and consolidated during learning.</p>
-    <p>My background spans physics and neuroscience: I hold a master's in computational physics and trained originally in theoretical physics before moving into clinical and computational neuroscience. I build the full analysis stack for my work — signal processing in MATLAB, mixed-effects modeling in R, and electrophysiology pipelines in Python.</p>
+      <h1>Nasim Mortazavi</h1>
+
+      <p class="subtitle">
+        I study how the human hippocampus <span class="accent">writes memory into place</span> —
+        reading sharp-wave ripples directly from the living brain.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#research">Explore research</a>
+        <a class="button secondary" href="mailto:nmortaza@uwo.ca">Contact me</a>
+      </div>
+    </div>
+
+    <aside class="hero-card" aria-label="Scientific visual summary">
+      <div class="signal-visual" aria-hidden="true">
+        <svg viewBox="0 0 520 420" role="img" aria-label="Abstract hippocampal ripple visualization">
+          <defs>
+            <linearGradient id="hippoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#315a40" stop-opacity=".92"/>
+              <stop offset="55%" stop-color="#6f8f73" stop-opacity=".72"/>
+              <stop offset="100%" stop-color="#a77745" stop-opacity=".72"/>
+            </linearGradient>
+
+            <radialGradient id="softGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#6f8f73" stop-opacity=".22"/>
+              <stop offset="100%" stop-color="#6f8f73" stop-opacity="0"/>
+            </radialGradient>
+
+            <filter id="blurGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="10" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <circle cx="260" cy="210" r="174" fill="url(#softGlow)"/>
+
+          <path
+            d="M151 254
+               C101 229 82 179 108 137
+               C136 92 204 80 262 104
+               C317 126 372 124 407 158
+               C446 196 431 256 382 287
+               C331 319 253 315 205 292
+               C183 281 169 267 151 254Z"
+            fill="none"
+            stroke="url(#hippoGradient)"
+            stroke-width="18"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            opacity=".9"
+            filter="url(#blurGlow)"
+          />
+
+          <path
+            d="M156 250
+               C111 228 95 183 119 147
+               C145 108 205 101 256 121
+               C311 143 365 140 396 169
+               C429 201 416 247 374 273
+               C326 302 257 299 214 279
+               C192 269 176 258 156 250Z"
+            fill="none"
+            stroke="#fffdf8"
+            stroke-width="7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            opacity=".78"
+          />
+
+          <path
+            class="ripple-path"
+            d="M80 213
+               C96 213 96 185 112 185
+               C128 185 128 243 144 243
+               C160 243 160 174 176 174
+               C192 174 192 254 208 254
+               C224 254 224 167 240 167
+               C256 167 256 254 272 254
+               C288 254 288 173 304 173
+               C320 173 320 244 336 244
+               C352 244 352 188 368 188
+               C384 188 384 218 400 218
+               C416 218 416 210 440 210"
+            fill="none"
+            stroke="#315a40"
+            stroke-width="5"
+            stroke-linecap="round"
+            opacity=".92"
+          />
+
+          <path
+            d="M80 213 H440"
+            fill="none"
+            stroke="#cfc1ad"
+            stroke-width="1.2"
+            stroke-dasharray="5 8"
+            opacity=".9"
+          />
+
+          <g fill="#315a40">
+            <circle cx="151" cy="254" r="5"/>
+            <circle cx="262" cy="104" r="5"/>
+            <circle cx="382" cy="287" r="5"/>
+          </g>
+
+          <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#716b60">
+            <text x="135" y="290">CA1</text>
+            <text x="250" y="82">SEEG</text>
+            <text x="346" y="323">Ripple</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-card-label">
+        <div class="label-top">
+          <span>Human hippocampal dynamics</span>
+          <span class="label-line"></span>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric">
+            <strong>SEEG</strong>
+            <span>Intracranial recordings</span>
+          </div>
+
+          <div class="metric">
+            <strong>CA1</strong>
+            <span>Hippocampal subfield</span>
+          </div>
+
+          <div class="metric">
+            <strong>Memory</strong>
+            <span>Associative learning</span>
+          </div>
+        </div>
+      </div>
+    </aside>
   </section>
 
-  <section id="research">
-    <h2>Research</h2>
+  <section id="about" class="section-card">
+    <div class="section-grid">
+      <div class="section-kicker">
+        <h2>About</h2>
+        <p class="section-note">
+          Human electrophysiology, spatial learning, and statistical modeling.
+        </p>
+      </div>
 
-    <div class="item">
-      <h3>Sharp-wave ripples and associative spatial learning</h3>
-      <div class="meta">Human CA1 · SEEG · hippocampal dynamics</div>
-      <p>How ripple activity in human CA1 reorganizes during learning: post-learning ripple-rate ramping, posterior predominance, and the link between ripple rate and behavioral performance.</p>
-    </div>
+      <div class="prose">
+        <p>
+          I am a computational neuroscientist working at the intersection of human electrophysiology,
+          spatial learning, and statistical modeling. My research uses intracranial SEEG recordings
+          from the human hippocampus to ask how memories of place and association are formed and
+          consolidated during learning.
+        </p>
 
-    <div class="item">
-      <h3>Localizing electrodes within hippocampal subfields</h3>
-      <div class="meta">HippUnfold · CT–MRI coregistration</div>
-      <p>A quantitative method for placing intracranial contacts within hippocampal subfields, resolving CA1 channel assignment across subjects.</p>
-    </div>
-
-    <div class="item">
-      <h3>Anterior–posterior functional differentiation</h3>
-      <div class="meta">Long-axis organization</div>
-      <p>How position along the hippocampal long axis shapes ripple dynamics and the encoding of spatial zones.</p>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-
-    <div class="pub">
-      <div class="title">Sharp-wave ripple dynamics in human CA1 during associative spatial learning</div>
-      <div class="cite">Mortazavi, N., et al. <em>In preparation.</em></div>
-      <span class="tag">First author · 2026</span>
-    </div>
-
-    <div class="pub">
-      <div class="title">Quantitative electrode localization within hippocampal subfields</div>
-      <div class="cite">Mortazavi, N., et al. <em>In preparation.</em></div>
-      <span class="tag">First author · 2026</span>
-    </div>
-
-    <div class="pub">
-      <div class="title">Functional MRI [chapter]</div>
-      <div class="cite">Oxford University Press. [Add full chapter title &amp; year.]</div>
-      <span class="tag">Book chapter</span>
-    </div>
-
-    <p style="margin-top:22px;font-size:.98rem"><a href="https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en">Full list on Google Scholar →</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p style="margin-bottom:22px">Open to roles in health data science and clinical neuroscience. Reach me at <a href="mailto:nmortaza@uwo.ca">nmortaza@uwo.ca</a>.</p>
-    <div class="links">
-      <a href="https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en">Scholar</a>
-      <a href="https://github.com/Nasim-photon">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">ORCID</a>
-      <a href="https://twitter.com/NasimMortazavi">Twitter</a>
+        <p>
+          My background spans physics and neuroscience: I hold a master's in computational physics
+          and trained originally in theoretical physics before moving into clinical and computational
+          neuroscience. I build the full analysis stack for my work — signal processing in MATLAB,
+          mixed-effects modeling in R, and electrophysiology pipelines in Python.
+        </p>
+      </div>
     </div>
   </section>
 
-  <footer>© 2026 Nasim Mortazavi · Built with care, no frameworks</footer>
+  <section id="research" class="section-card">
+    <div class="section-grid">
+      <div class="section-kicker">
+        <h2>Research</h2>
+        <p class="section-note">
+          A focused program on hippocampal ripples, learning, and anatomical precision.
+        </p>
+      </div>
 
-</div>
+      <div class="research-list">
+        <article class="research-item">
+          <h3>Sharp-wave ripples and associative spatial learning</h3>
+          <div class="meta">Human CA1 · SEEG · Hippocampal dynamics</div>
+          <p>
+            How ripple activity in human CA1 reorganizes during learning: post-learning ripple-rate
+            ramping, posterior predominance, and the link between ripple rate and behavioral performance.
+          </p>
+        </article>
+
+        <article class="research-item">
+          <h3>Localizing electrodes within hippocampal subfields</h3>
+          <div class="meta">HippUnfold · CT–MRI coregistration</div>
+          <p>
+            A quantitative method for placing intracranial contacts within hippocampal subfields,
+            resolving CA1 channel assignment across subjects.
+          </p>
+        </article>
+
+        <article class="research-item">
+          <h3>Anterior–posterior functional differentiation</h3>
+          <div class="meta">Long-axis organization</div>
+          <p>
+            How position along the hippocampal long axis shapes ripple dynamics and the encoding
+            of spatial zones.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="section-card">
+    <div class="section-grid">
+      <div class="section-kicker">
+        <h2>Publications</h2>
+        <p class="section-note">
+          Manuscripts, chapters, and ongoing work.
+        </p>
+      </div>
+
+      <div>
+        <div class="pub-list">
+          <article class="pub">
+            <div class="title">
+              Sharp-wave ripple dynamics in human CA1 during associative spatial learning
+            </div>
+            <div class="cite">
+              Mortazavi, N., et al. <em>In preparation.</em>
+            </div>
+            <div class="tag-row">
+              <span class="tag">First author</span>
+              <span class="tag">2026</span>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="title">
+              Quantitative electrode localization within hippocampal subfields
+            </div>
+            <div class="cite">
+              Mortazavi, N., et al. <em>In preparation.</em>
+            </div>
+            <div class="tag-row">
+              <span class="tag">First author</span>
+              <span class="tag">2026</span>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="title">
+              Functional MRI [chapter]
+            </div>
+            <div class="cite">
+              Oxford University Press. [Add full chapter title &amp; year.]
+            </div>
+            <div class="tag-row">
+              <span class="tag">Book chapter</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="scholar-link prose">
+          <a href="https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+            Full list on Google Scholar →
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-card">
+    <div class="section-grid">
+      <div class="section-kicker">
+        <h2>Contact</h2>
+        <p class="section-note">
+          Open to research, health data science, and clinical neuroscience opportunities.
+        </p>
+      </div>
+
+      <div class="contact-panel">
+        <div class="contact-box">
+          <p>
+            I am open to roles in health data science, clinical neuroscience, computational neuroscience,
+            and translational research.
+          </p>
+
+          <a class="email-link" href="mailto:nmortaza@uwo.ca">
+            nmortaza@uwo.ca
+          </a>
+        </div>
+
+        <div class="links" aria-label="Professional links">
+          <a href="https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+          <a href="https://github.com/Nasim-photon" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span title="Replace this placeholder with your LinkedIn URL">LinkedIn</span>
+          <span title="Replace this placeholder with your ORCID URL">ORCID</span>
+          <a href="https://twitter.com/NasimMortazavi" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-mark">© 2026 Nasim Mortazavi</span>
+    <span>Built with care · No frameworks · Scalable graphics</span>
+  </footer>
+</main>
+
 </body>
 </html>
