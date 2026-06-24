@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 
 <meta name="description" content="Nasim Mortazavi is a computational scientist working at the intersection of human neuroscience, health data, AI, machine learning, statistical modeling, and scientific software development.">
 <meta name="author" content="Nasim Mortazavi">
-<meta name="theme-color" content="#faf7ef">
+<meta name="theme-color" content="#fdfcf8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,1079 +17,980 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --bg:#fbf8f1;
-    --bg-2:#f3eadc;
-    --paper:#fffdf8;
-    --paper-soft:#f8f2e8;
-    --ink:#171511;
-    --ink-soft:#2d2922;
-    --muted:#716b60;
-    --muted-2:#91887a;
-    --line:#ded4c3;
-    --line-strong:#cdbfa8;
-    --accent:#315a40;
-    --accent-dark:#203f2d;
-    --accent-soft:#6f8f73;
-    --gold:#a77745;
-    --gold-soft:#d8b27a;
-    --red-soft:#9b5a46;
-    --shadow:0 24px 70px rgba(47,38,24,.12);
-    --shadow-soft:0 14px 38px rgba(47,38,24,.08);
-    --radius:26px;
-    --radius-sm:16px;
-    --maxw:1140px;
-    --content:760px;
+  :root {
+    /* Minimalist & Clean Palette */
+    --bg: #fdfcf8;
+    --bg-2: #f4eee4;
+    --paper: #ffffff;
+    --paper-soft: #fbfaf6;
+    --ink: #111111;
+    --ink-soft: #333333;
+    --muted: #666666;
+    --muted-2: #888888;
+    --line: #e6e2d8;
+    --line-strong: #d1cbc0;
+    --accent: #2c4d37;
+    --accent-dark: #1b3323;
+    --accent-soft: #5b7a60;
+    --gold: #91683c;
+    --gold-soft: #c8a77a;
+    
+    /* Refined Shadows and Borders for a Professional Aesthetic */
+    --shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+    --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.02);
+    --radius: 12px;
+    --radius-sm: 8px;
+    
+    --maxw: 1100px;
+    --content: 760px;
   }
 
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  html{
-    scroll-behavior:smooth;
+  html {
+    scroll-behavior: smooth;
   }
 
-  body{
-    min-height:100vh;
-    font-family:"Newsreader", Georgia, serif;
-    font-size:18px;
-    line-height:1.72;
-    color:var(--ink);
-    background:
-      radial-gradient(circle at 8% -4%, rgba(111,143,115,.18), transparent 34rem),
-      radial-gradient(circle at 95% 8%, rgba(167,119,69,.15), transparent 30rem),
-      linear-gradient(180deg, var(--bg), #f8f2e8 58%, var(--bg));
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+  body {
+    min-height: 100vh;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    opacity:.22;
-    background-image:
-      linear-gradient(rgba(49,90,64,.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(49,90,64,.06) 1px, transparent 1px);
-    background-size:46px 46px;
-    mask-image:linear-gradient(to bottom, black, transparent 72%);
+  ::selection {
+    background: rgba(44, 77, 55, 0.15);
   }
 
-  ::selection{
-    background:rgba(49,90,64,.18);
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
 
-  a{
-    color:var(--accent);
-    text-decoration:none;
+  a:hover {
+    color: var(--accent-dark);
   }
 
-  a:hover{
-    color:var(--accent-dark);
+  .skip-link {
+    position: absolute;
+    left: 20px;
+    top: -60px;
+    z-index: 100;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    transition: top 0.2s ease;
   }
 
-  .skip-link{
-    position:absolute;
-    left:20px;
-    top:-60px;
-    z-index:100;
-    background:var(--ink);
-    color:var(--paper);
-    padding:10px 14px;
-    border-radius:10px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:13px;
-    transition:top .2s ease;
+  .skip-link:focus {
+    top: 18px;
   }
 
-  .skip-link:focus{
-    top:18px;
+  .site-shell {
+    width: min(calc(100% - 40px), var(--maxw));
+    margin: 0 auto;
+    position: relative;
   }
 
-  .site-shell{
-    width:min(calc(100% - 40px), var(--maxw));
-    margin:0 auto;
-    position:relative;
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(253, 252, 248, 0.9);
+    border-bottom: 1px solid var(--line);
   }
 
-  .topbar{
-    position:sticky;
-    top:0;
-    z-index:50;
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    background:rgba(251,248,241,.84);
-    border-bottom:1px solid rgba(222,212,195,.76);
+  .nav-inner {
+    width: min(calc(100% - 40px), var(--maxw));
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
   }
 
-  .nav-inner{
-    width:min(calc(100% - 40px), var(--maxw));
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-    padding:16px 0;
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--ink);
+    text-decoration: none;
   }
 
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:var(--ink);
-    text-decoration:none;
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    background: var(--paper);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--accent);
   }
 
-  .brand-mark{
-    width:39px;
-    height:39px;
-    display:grid;
-    place-items:center;
-    border:1px solid var(--line-strong);
-    border-radius:50%;
-    background:linear-gradient(145deg, rgba(255,255,255,.78), rgba(242,234,220,.78));
-    box-shadow:0 8px 22px rgba(47,38,24,.08);
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.08em;
-    color:var(--accent);
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
   }
 
-  .brand-text{
-    display:flex;
-    flex-direction:column;
-    line-height:1.1;
+  .brand-name {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
-  .brand-name{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.11em;
-    text-transform:uppercase;
+  .brand-role {
+    margin-top: 2px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
   }
 
-  .brand-role{
-    margin-top:3px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:10.5px;
-    color:var(--muted);
-    letter-spacing:.04em;
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
   }
 
-  nav ul{
-    display:flex;
-    align-items:center;
-    gap:5px;
-    list-style:none;
+  nav a.link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 4px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    transition: background 0.2s ease, color 0.2s ease;
   }
 
-  nav a.link{
-    display:inline-flex;
-    align-items:center;
-    min-height:36px;
-    padding:0 10px;
-    border-radius:999px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    letter-spacing:.04em;
-    color:var(--muted);
-    transition:background .2s ease, color .2s ease, transform .2s ease;
+  nav a.link:hover {
+    color: var(--accent);
+    background: rgba(44, 77, 55, 0.05);
   }
 
-  nav a.link:hover{
-    color:var(--accent);
-    background:rgba(49,90,64,.075);
-    transform:translateY(-1px);
+  main {
+    position: relative;
   }
 
-  main{
-    position:relative;
+  section {
+    scroll-margin-top: 100px;
   }
 
-  section{
-    scroll-margin-top:92px;
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+    gap: 60px;
+    align-items: center;
+    padding: 100px 0 80px;
   }
 
-  .hero{
-    display:grid;
-    grid-template-columns:minmax(0, 1.05fr) minmax(340px, .9fr);
-    gap:58px;
-    align-items:center;
-    padding:92px 0 76px;
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
   }
 
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:22px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    font-weight:500;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    color:var(--accent);
+  .eyebrow::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: var(--accent-soft);
   }
 
-  .eyebrow::before{
-    content:"";
-    width:34px;
-    height:1px;
-    background:var(--accent-soft);
+  h1 {
+    max-width: 780px;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(3rem, 7.5vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
   }
 
-  h1{
-    max-width:780px;
-    font-family:"Fraunces", Georgia, serif;
-    font-weight:600;
-    font-size:clamp(3rem, 7.8vw, 6.5rem);
-    line-height:.96;
-    letter-spacing:-.045em;
-    color:var(--ink);
+  .hero-title-break {
+    display: block;
   }
 
-  .hero-title-break{
-    display:block;
+  .subtitle {
+    margin-top: 28px;
+    max-width: 650px;
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    line-height: 1.6;
+    color: var(--ink-soft);
   }
 
-  .subtitle{
-    margin-top:26px;
-    max-width:650px;
-    font-size:clamp(1.22rem, 2.1vw, 1.52rem);
-    line-height:1.52;
-    color:var(--ink-soft);
+  .subtitle .accent {
+    color: var(--accent);
+    font-style: italic;
   }
 
-  .subtitle .accent{
-    color:var(--accent);
-    font-style:italic;
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
   }
 
-  .hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:34px;
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 24px;
+    border-radius: var(--radius-sm);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
   }
 
-  .button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    min-height:44px;
-    padding:0 18px;
-    border-radius:999px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12.5px;
-    font-weight:500;
-    letter-spacing:.04em;
-    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  .button.primary {
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--accent);
   }
 
-  .button.primary{
-    color:#fffdf8;
-    background:var(--accent);
-    box-shadow:0 14px 26px rgba(49,90,64,.22);
+  .button.primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
   }
 
-  .button.primary:hover{
-    color:#fffdf8;
-    transform:translateY(-2px);
-    box-shadow:0 18px 34px rgba(49,90,64,.26);
+  .button.secondary {
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+    background: transparent;
   }
 
-  .button.secondary{
-    color:var(--accent);
-    border:1px solid var(--line-strong);
-    background:rgba(255,253,248,.64);
+  .button.secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
   }
 
-  .button.secondary:hover{
-    background:rgba(49,90,64,.08);
-    transform:translateY(-2px);
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
   }
 
-  .hero-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:26px;
+  .hero-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0 12px;
+    border-radius: 4px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 
-  .hero-tags span{
-    display:inline-flex;
-    align-items:center;
-    min-height:28px;
-    padding:0 10px;
-    border:1px solid rgba(49,90,64,.18);
-    border-radius:999px;
-    background:rgba(255,253,248,.58);
-    font-family:"IBM Plex Mono", monospace;
-    font-size:10.5px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    color:var(--muted);
+  .hero-card {
+    position: relative;
+    min-height: 480px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+    overflow: hidden;
   }
 
-  .hero-card{
-    position:relative;
-    min-height:500px;
-    border:1px solid rgba(207,193,173,.9);
-    border-radius:var(--radius);
-    background:
-      linear-gradient(145deg, rgba(255,253,248,.9), rgba(246,238,225,.82)),
-      radial-gradient(circle at 50% 30%, rgba(111,143,115,.17), transparent 18rem);
-    box-shadow:var(--shadow);
-    overflow:hidden;
+  .science-visual {
+    position: absolute;
+    inset: 34px 26px 134px;
+    display: grid;
+    place-items: center;
   }
 
-  .hero-card::before{
-    content:"";
-    position:absolute;
-    inset:18px;
-    border:1px solid rgba(207,193,173,.55);
-    border-radius:calc(var(--radius) - 8px);
-    pointer-events:none;
+  .science-visual svg {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    overflow: visible;
   }
 
-  .hero-card::after{
-    content:"";
-    position:absolute;
-    width:240px;
-    height:240px;
-    right:-90px;
-    top:-80px;
-    border-radius:50%;
-    background:rgba(167,119,69,.12);
-    filter:blur(2px);
+  .draw-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 3s ease forwards;
   }
 
-  .science-visual{
-    position:absolute;
-    inset:34px 26px 134px;
-    display:grid;
-    place-items:center;
-  }
-
-  .science-visual svg{
-    width:100%;
-    max-width:440px;
-    height:auto;
-    overflow:visible;
-  }
-
-  .draw-line{
-    stroke-dasharray:1000;
-    stroke-dashoffset:1000;
-    animation:drawLine 3.2s ease forwards;
-  }
-
-  @keyframes drawLine{
-    to{
-      stroke-dashoffset:0;
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
     }
   }
 
-  .hero-card-label{
-    position:absolute;
-    left:30px;
-    right:30px;
-    bottom:30px;
-    display:grid;
-    gap:12px;
+  .hero-card-label {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    display: grid;
+    gap: 16px;
   }
 
-  .label-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11px;
-    color:var(--muted);
-    letter-spacing:.08em;
-    text-transform:uppercase;
+  .label-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
-  .label-line{
-    height:1px;
-    flex:1;
-    background:var(--line);
+  .label-line {
+    height: 1px;
+    flex: 1;
+    background: var(--line);
   }
 
-  .metric-row{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:10px;
+  .metric-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 
-  .metric{
-    min-height:86px;
-    padding:14px 12px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:16px;
-    background:rgba(255,253,248,.68);
+  .metric {
+    min-height: 80px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper-soft);
   }
 
-  .metric strong{
-    display:block;
-    font-family:"Fraunces", Georgia, serif;
-    font-size:1.16rem;
-    line-height:1.1;
-    color:var(--accent);
+  .metric strong {
+    display: block;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--accent);
   }
 
-  .metric span{
-    display:block;
-    margin-top:8px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:10px;
-    line-height:1.45;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-    color:var(--muted);
+  .metric span {
+    display: block;
+    margin-top: 6px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 
-  .section-card{
-    margin:28px 0;
-    padding:42px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:var(--radius);
-    background:rgba(255,253,248,.74);
-    box-shadow:var(--shadow-soft);
+  .section-card {
+    margin: 40px 0;
+    padding: 60px 0;
+    border-top: 1px solid var(--line);
   }
 
-  .section-grid{
-    display:grid;
-    grid-template-columns:240px minmax(0, 1fr);
-    gap:48px;
-    align-items:start;
+  .section-grid {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 60px;
+    align-items: start;
   }
 
-  .section-kicker{
-    position:sticky;
-    top:100px;
+  .section-kicker {
+    position: sticky;
+    top: 100px;
   }
 
-  h2{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--accent);
+  h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
   }
 
-  .section-note{
-    margin-top:12px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    line-height:1.65;
-    color:var(--muted);
+  .section-note {
+    margin-top: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--muted);
   }
 
-  .prose{
-    max-width:var(--content);
+  .prose {
+    max-width: var(--content);
   }
 
-  .prose p{
-    color:var(--ink-soft);
+  .prose p {
+    color: var(--ink-soft);
   }
 
-  .prose p + p{
-    margin-top:1.18rem;
+  .prose p + p {
+    margin-top: 1.2rem;
   }
 
-  .prose a{
-    border-bottom:1px solid rgba(49,90,64,.24);
+  .prose a {
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 2px;
   }
 
-  .prose a:hover{
-    border-bottom-color:var(--accent);
+  .prose a:hover {
+    border-bottom-color: var(--accent);
   }
 
-  .toolkit{
-    display:grid;
-    grid-template-columns:repeat(4, minmax(0, 1fr));
-    gap:10px;
-    margin-top:26px;
+  .toolkit {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 40px;
   }
 
-  .tool{
-    padding:14px 12px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:14px;
-    background:rgba(248,242,232,.72);
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11px;
-    line-height:1.45;
-    color:var(--muted);
+  .tool {
+    padding: 20px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--muted);
   }
 
-  .tool strong{
-    display:block;
-    margin-bottom:4px;
-    font-family:"Newsreader", Georgia, serif;
-    font-size:1.05rem;
-    line-height:1.15;
-    color:var(--ink);
+  .tool strong {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
   }
 
-  .research-feature{
-    display:grid;
-    grid-template-columns:minmax(0, .92fr) minmax(0, 1.08fr);
-    gap:24px;
-    align-items:center;
-    margin-bottom:24px;
-    padding:24px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:var(--radius-sm);
-    background:
-      radial-gradient(circle at 20% 15%, rgba(111,143,115,.13), transparent 18rem),
-      rgba(248,242,232,.62);
+  .research-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
   }
 
-  .research-figure{
-    min-height:330px;
-    display:grid;
-    place-items:center;
-    border-radius:18px;
-    background:rgba(255,253,248,.64);
-    border:1px solid rgba(222,212,195,.72);
-    overflow:hidden;
+  .research-figure {
+    min-height: 330px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    overflow: hidden;
   }
 
-  .research-figure svg{
-    width:100%;
-    height:auto;
-    max-width:420px;
-    padding:12px;
+  .research-figure svg {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    padding: 20px;
   }
 
-  .research-feature h3{
-    font-family:"Fraunces", Georgia, serif;
-    font-size:1.6rem;
-    line-height:1.15;
-    font-weight:600;
-    letter-spacing:-.015em;
-    color:var(--ink);
+  .research-feature h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--ink);
   }
 
-  .research-feature p{
-    margin-top:14px;
-    color:var(--muted);
-    font-size:1.02rem;
+  .research-feature p {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 1.05rem;
   }
 
-  .research-list{
-    display:grid;
-    gap:18px;
+  .research-list {
+    display: grid;
+    gap: 20px;
   }
 
-  .research-item{
-    position:relative;
-    padding:24px 24px 24px 28px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:var(--radius-sm);
-    background:
-      linear-gradient(135deg, rgba(255,253,248,.84), rgba(247,241,231,.66));
-    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  .research-item {
+    position: relative;
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    transition: transform 0.2s ease, border-color 0.2s ease;
   }
 
-  .research-item:hover{
-    transform:translateY(-3px);
-    border-color:rgba(49,90,64,.28);
-    box-shadow:0 16px 34px rgba(47,38,24,.09);
+  .research-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--line-strong);
   }
 
-  .research-item::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:22px;
-    bottom:22px;
-    width:3px;
-    border-radius:999px;
-    background:linear-gradient(180deg, var(--accent), var(--accent-soft));
+  .research-item::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 24px;
+    bottom: 24px;
+    width: 3px;
+    border-radius: 4px;
+    background: var(--accent);
   }
 
-  .research-item h3{
-    font-family:"Fraunces", Georgia, serif;
-    font-size:1.36rem;
-    font-weight:600;
-    line-height:1.22;
-    letter-spacing:-.01em;
-    color:var(--ink);
+  .research-item h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--ink);
   }
 
-  .meta{
-    margin-top:8px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11px;
-    font-weight:500;
-    line-height:1.6;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--accent-soft);
+  .meta {
+    margin-top: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
   }
 
-  .research-item p{
-    margin-top:10px;
-    font-size:1rem;
-    line-height:1.65;
-    color:var(--muted);
+  .research-item p {
+    margin-top: 12px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--muted);
   }
 
-  .project-intro{
-    max-width:var(--content);
-    margin-bottom:24px;
-    color:var(--ink-soft);
+  .project-intro {
+    max-width: var(--content);
+    margin-bottom: 40px;
+    color: var(--ink-soft);
   }
 
-  .project-grid{
-    display:grid;
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:16px;
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 
-  .project-card{
-    position:relative;
-    min-height:260px;
-    display:flex;
-    flex-direction:column;
-    padding:24px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:var(--radius-sm);
-    background:
-      linear-gradient(145deg, rgba(255,253,248,.84), rgba(248,242,232,.68));
-    overflow:hidden;
-    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  .project-card {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .project-card:hover{
-    transform:translateY(-3px);
-    border-color:rgba(49,90,64,.28);
-    box-shadow:0 16px 34px rgba(47,38,24,.09);
+  .project-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-soft);
+    box-shadow: var(--shadow-soft);
   }
 
-  .project-card::after{
-    content:"";
-    position:absolute;
-    right:-48px;
-    top:-48px;
-    width:128px;
-    height:128px;
-    border-radius:50%;
-    background:rgba(49,90,64,.075);
+  .project-card h3 {
+    position: relative;
+    z-index: 1;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
   }
 
-  .project-card h3{
-    position:relative;
-    z-index:1;
-    max-width:88%;
-    font-family:"Fraunces", Georgia, serif;
-    font-size:1.32rem;
-    font-weight:600;
-    line-height:1.18;
-    color:var(--ink);
+  .project-card p {
+    position: relative;
+    z-index: 1;
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
 
-  .project-card p{
-    position:relative;
-    z-index:1;
-    margin-top:12px;
-    color:var(--muted);
-    font-size:1rem;
-    line-height:1.62;
+  .project-footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 24px;
   }
 
-  .project-footer{
-    position:relative;
-    z-index:1;
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:auto;
-    padding-top:18px;
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 0 10px;
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    background: var(--paper-soft);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
   }
 
-  .chip{
-    display:inline-flex;
-    align-items:center;
-    min-height:25px;
-    padding:0 9px;
-    border:1px solid rgba(49,90,64,.2);
-    border-radius:999px;
-    background:rgba(49,90,64,.06);
-    font-family:"IBM Plex Mono", monospace;
-    font-size:10px;
-    font-weight:500;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--accent);
+  .chip.gold {
+    color: var(--gold);
+    border-color: var(--gold-soft);
+    background: rgba(167, 119, 69, 0.05);
   }
 
-  .chip.gold{
-    border-color:rgba(167,119,69,.28);
-    background:rgba(167,119,69,.08);
-    color:var(--gold);
+  .chip.muted {
+    color: var(--muted);
   }
 
-  .chip.muted{
-    border-color:rgba(145,136,122,.26);
-    background:rgba(145,136,122,.07);
-    color:var(--muted);
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    border-bottom: 1px solid transparent;
+    width: max-content;
   }
 
-  .project-link{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    margin-top:18px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    color:var(--accent);
-    border-bottom:1px solid rgba(49,90,64,.22);
-    width:max-content;
+  .project-link:hover {
+    border-bottom-color: var(--accent);
   }
 
-  .project-link:hover{
-    border-bottom-color:var(--accent);
+  .pub-list {
+    display: grid;
+    gap: 16px;
   }
 
-  .pub-list{
-    display:grid;
-    gap:14px;
+  .pub {
+    padding: 24px 30px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
   }
 
-  .pub{
-    padding:24px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:var(--radius-sm);
-    background:rgba(255,253,248,.6);
+  .pub .title {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--ink);
   }
 
-  .pub .title{
-    font-weight:600;
-    line-height:1.45;
-    color:var(--ink);
+  .pub .cite {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--muted);
   }
 
-  .pub .cite{
-    margin-top:6px;
-    font-size:1rem;
-    color:var(--muted);
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
   }
 
-  .tag-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:14px;
+  .scholar-link {
+    margin-top: 32px;
   }
 
-  .scholar-link{
-    margin-top:22px;
+  .contact-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 40px;
+    align-items: start;
   }
 
-  .contact-panel{
-    display:grid;
-    grid-template-columns:minmax(0, 1fr) 270px;
-    gap:34px;
-    align-items:start;
+  .contact-box {
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
   }
 
-  .contact-box{
-    padding:24px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:var(--radius-sm);
-    background:
-      linear-gradient(145deg, rgba(49,90,64,.075), rgba(255,253,248,.72));
+  .contact-box p {
+    color: var(--ink-soft);
   }
 
-  .contact-box p{
-    color:var(--ink-soft);
+  .email-link {
+    display: inline-flex;
+    margin-top: 24px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 2px;
   }
 
-  .email-link{
-    display:inline-flex;
-    margin-top:14px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:13px;
-    border-bottom:1px solid rgba(49,90,64,.26);
+  .email-link:hover {
+    border-bottom-color: var(--accent);
   }
 
-  .links{
-    display:grid;
-    gap:10px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:13px;
+  .links {
+    display: grid;
+    gap: 12px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
   }
 
   .links a,
-  .links span{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:16px;
-    min-height:42px;
-    padding:0 14px;
-    border:1px solid rgba(222,212,195,.84);
-    border-radius:999px;
-    background:rgba(255,253,248,.6);
-    color:var(--muted);
-    transition:transform .2s ease, color .2s ease, background .2s ease;
+  .links span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 48px;
+    padding: 0 20px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    color: var(--ink-soft);
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
-  .links a::after{
-    content:"↗";
-    color:var(--accent-soft);
+  .links a::after {
+    content: "→";
+    color: var(--muted-2);
+    transition: transform 0.2s ease;
   }
 
-  .links a:hover{
-    transform:translateY(-2px);
-    color:var(--accent);
-    background:rgba(49,90,64,.07);
+  .links a:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-soft);
+    color: var(--accent);
   }
 
-  .links span{
-    color:var(--muted-2);
-    cursor:not-allowed;
+  .links a:hover::after {
+    transform: translateX(4px);
+    color: var(--accent);
   }
 
-  .links span::after{
-    content:"soon";
-    font-size:10px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--muted-2);
+  .links span {
+    color: var(--muted-2);
+    cursor: not-allowed;
+    background: var(--paper-soft);
   }
 
-  footer{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:42px 0 64px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    line-height:1.7;
-    letter-spacing:.04em;
-    color:var(--muted);
+  .links span::after {
+    content: "soon";
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-2);
   }
 
-  .footer-mark{
-    color:var(--accent);
+  footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 0 80px;
+    border-top: 1px solid var(--line);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: var(--muted);
   }
 
-  :focus-visible{
-    outline:2px solid var(--accent);
-    outline-offset:4px;
-    border-radius:8px;
+  .footer-mark {
+    color: var(--accent);
   }
 
-  @media (max-width:980px){
-    .hero{
-      grid-template-columns:1fr;
-      gap:40px;
-      padding:72px 0 54px;
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 980px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 60px 0 40px;
     }
 
-    .hero-card{
-      min-height:470px;
+    .section-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
     }
 
-    .section-grid{
-      grid-template-columns:1fr;
-      gap:24px;
+    .section-kicker {
+      position: static;
     }
 
-    .section-kicker{
-      position:static;
+    .section-card {
+      padding: 40px 0;
     }
 
-    .section-card{
-      padding:32px;
+    .research-feature {
+      grid-template-columns: 1fr;
     }
 
-    .research-feature{
-      grid-template-columns:1fr;
+    .project-grid {
+      grid-template-columns: 1fr;
     }
 
-    .project-grid{
-      grid-template-columns:1fr;
+    .contact-panel {
+      grid-template-columns: 1fr;
     }
 
-    .contact-panel{
-      grid-template-columns:1fr;
-    }
-
-    .toolkit{
-      grid-template-columns:repeat(2, minmax(0, 1fr));
+    .toolkit {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
-  @media (max-width:720px){
-    body{
-      font-size:17px;
+  @media (max-width: 720px) {
+    body {
+      font-size: 17px;
     }
 
     .site-shell,
-    .nav-inner{
-      width:min(calc(100% - 28px), var(--maxw));
+    .nav-inner {
+      width: min(calc(100% - 32px), var(--maxw));
     }
 
-    .nav-inner{
-      align-items:flex-start;
-      flex-direction:column;
-      gap:12px;
-      padding:14px 0;
+    .nav-inner {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px 0;
     }
 
-    nav ul{
-      width:100%;
-      justify-content:space-between;
-      gap:3px;
-      flex-wrap:wrap;
+    nav ul {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
-    nav a.link{
-      padding:0 8px;
-      font-size:11px;
+    nav a.link {
+      padding: 0;
+      font-size: 13px;
     }
 
-    .brand-role{
-      display:none;
+    nav a.link:hover {
+      background: transparent;
     }
 
-    h1{
-      font-size:clamp(3rem, 16vw, 5rem);
+    .brand-role {
+      display: none;
     }
 
-    .subtitle{
-      font-size:1.18rem;
+    h1 {
+      font-size: clamp(3rem, 14vw, 4.5rem);
     }
 
-    .hero-actions{
-      flex-direction:column;
-      align-items:stretch;
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
     }
 
-    .button{
-      width:100%;
+    .button {
+      width: 100%;
     }
 
-    .hero-card{
-      min-height:440px;
-      border-radius:20px;
+    .hero-card {
+      min-height: 440px;
     }
 
-    .science-visual{
-      inset:28px 18px 140px;
+    .science-visual {
+      inset: 20px 16px 140px;
     }
 
-    .hero-card-label{
-      left:20px;
-      right:20px;
-      bottom:20px;
+    .metric-row {
+      grid-template-columns: 1fr;
     }
 
-    .metric-row{
-      grid-template-columns:1fr;
+    .metric {
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
     }
 
-    .metric{
-      min-height:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+    .metric span {
+      margin-top: 0;
+      text-align: right;
     }
 
-    .metric span{
-      margin-top:0;
-      text-align:right;
-    }
-
-    .section-card{
-      margin:20px 0;
-      padding:24px 18px;
-      border-radius:20px;
-    }
-
-    .toolkit{
-      grid-template-columns:1fr;
+    .toolkit {
+      grid-template-columns: 1fr;
     }
 
     .research-feature,
     .research-item,
     .project-card,
     .pub,
-    .contact-box{
-      padding:20px;
+    .contact-box {
+      padding: 24px;
     }
 
-    .research-figure{
-      min-height:280px;
+    .research-figure {
+      min-height: 260px;
     }
 
-    footer{
-      flex-direction:column;
-      padding-bottom:42px;
+    footer {
+      flex-direction: column;
+      padding-bottom: 60px;
     }
   }
 
-  @media (prefers-reduced-motion:reduce){
-    html{
-      scroll-behavior:auto;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
 
     *,
     *::before,
-    *::after{
-      animation:none!important;
-      transition:none!important;
-    }
-  }
-
-  @media print{
-    body{
-      background:#fff;
-      color:#000;
-    }
-
-    body::before,
-    .topbar,
-    .hero-card,
-    .hero-actions{
-      display:none;
-    }
-
-    .site-shell{
-      width:100%;
-      max-width:none;
-    }
-
-    .hero{
-      display:block;
-      padding:24px 0;
-    }
-
-    .section-card{
-      box-shadow:none;
-      border-color:#bbb;
-      break-inside:avoid;
-    }
-
-    a{
-      color:#000;
-      text-decoration:underline;
+    *::after {
+      animation: none !important;
+      transition: none !important;
     }
   }
 </style>
@@ -1103,7 +1005,8 @@
   "sameAs": [
     "https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en",
     "https://github.com/Nasim-photon",
-    "https://twitter.com/NasimMortazavi"
+    "https://twitter.com/NasimMortazavi",
+    "https://www.linkedin.com/in/nasimmortazavi"
   ],
   "knowsAbout": [
     "Computational neuroscience",
@@ -1153,7 +1056,7 @@
 
   <section class="hero" aria-label="Introduction">
     <div>
-      <div class="eyebrow">Computational Scientist · Neuroscience & AI for Health</div>
+      <div class="eyebrow">Computational Scientist · AI for Health</div>
 
       <h1>
         Nasim
@@ -1189,19 +1092,19 @@
         <svg viewBox="0 0 540 450" role="img" aria-label="Abstract hippocampus, ripple, and AI health data visualization">
           <defs>
             <linearGradient id="hippoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#315a40" stop-opacity=".95"/>
-              <stop offset="55%" stop-color="#6f8f73" stop-opacity=".76"/>
-              <stop offset="100%" stop-color="#a77745" stop-opacity=".72"/>
+              <stop offset="0%" stop-color="#2c4d37" stop-opacity=".95"/>
+              <stop offset="55%" stop-color="#5b7a60" stop-opacity=".76"/>
+              <stop offset="100%" stop-color="#91683c" stop-opacity=".72"/>
             </linearGradient>
 
             <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#315a40" stop-opacity=".82"/>
-              <stop offset="100%" stop-color="#a77745" stop-opacity=".82"/>
+              <stop offset="0%" stop-color="#2c4d37" stop-opacity=".82"/>
+              <stop offset="100%" stop-color="#91683c" stop-opacity=".82"/>
             </linearGradient>
 
             <radialGradient id="softGlow" cx="50%" cy="48%" r="52%">
-              <stop offset="0%" stop-color="#6f8f73" stop-opacity=".22"/>
-              <stop offset="100%" stop-color="#6f8f73" stop-opacity="0"/>
+              <stop offset="0%" stop-color="#5b7a60" stop-opacity=".15"/>
+              <stop offset="100%" stop-color="#5b7a60" stop-opacity="0"/>
             </radialGradient>
 
             <filter id="blurGlow" x="-40%" y="-40%" width="180%" height="180%">
@@ -1241,11 +1144,11 @@
                C326 306 258 302 216 281
                C194 270 175 258 153 250Z"
             fill="none"
-            stroke="#fffdf8"
+            stroke="#fdfcf8"
             stroke-width="7"
             stroke-linecap="round"
             stroke-linejoin="round"
-            opacity=".78"
+            opacity=".85"
           />
 
           <path
@@ -1263,7 +1166,7 @@
                C374 188 374 219 390 219
                C406 219 406 211 430 211"
             fill="none"
-            stroke="#315a40"
+            stroke="#2c4d37"
             stroke-width="5"
             stroke-linecap="round"
             opacity=".92"
@@ -1272,44 +1175,44 @@
           <path
             d="M70 215 H430"
             fill="none"
-            stroke="#cfc1ad"
+            stroke="#d1cbc0"
             stroke-width="1.2"
             stroke-dasharray="5 8"
             opacity=".9"
           />
 
-          <g fill="#315a40">
+          <g fill="#2c4d37">
             <circle cx="148" cy="253" r="5"/>
             <circle cx="264" cy="104" r="5"/>
             <circle cx="384" cy="288" r="5"/>
           </g>
 
-          <g stroke="#315a40" stroke-width="2" opacity=".76">
+          <g stroke="#2c4d37" stroke-width="2" opacity=".76">
             <line x1="148" y1="253" x2="118" y2="318"/>
             <line x1="264" y1="104" x2="275" y2="54"/>
             <line x1="384" y1="288" x2="427" y2="332"/>
           </g>
 
-          <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#716b60">
+          <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#666666">
             <text x="92" y="339">CA1 / SEEG</text>
             <text x="246" y="45">Ripple signal</text>
             <text x="386" y="353">Memory</text>
           </g>
 
           <g transform="translate(76 356)">
-            <rect x="0" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
-            <rect x="102" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
-            <rect x="204" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
-            <rect x="306" y="0" width="82" height="34" rx="12" fill="#fffdf8" stroke="#ded4c3"/>
+            <rect x="0" y="0" width="82" height="34" rx="6" fill="#fdfcf8" stroke="#e6e2d8"/>
+            <rect x="102" y="0" width="82" height="34" rx="6" fill="#fdfcf8" stroke="#e6e2d8"/>
+            <rect x="204" y="0" width="82" height="34" rx="6" fill="#fdfcf8" stroke="#e6e2d8"/>
+            <rect x="306" y="0" width="82" height="34" rx="6" fill="#fdfcf8" stroke="#e6e2d8"/>
 
             <path d="M82 17 H102" stroke="url(#dataGradient)" stroke-width="2"/>
             <path d="M184 17 H204" stroke="url(#dataGradient)" stroke-width="2"/>
             <path d="M286 17 H306" stroke="url(#dataGradient)" stroke-width="2"/>
 
-            <text x="19" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">Signal</text>
-            <text x="124" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">Model</text>
-            <text x="224" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">AI</text>
-            <text x="324" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#315a40">Health</text>
+            <text x="19" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2c4d37">Signal</text>
+            <text x="124" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2c4d37">Model</text>
+            <text x="224" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2c4d37">AI</text>
+            <text x="324" y="22" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2c4d37">Health</text>
           </g>
         </svg>
       </div>
@@ -1384,12 +1287,12 @@
 
           <div class="tool">
             <strong>AI / ML</strong>
-            1D-CNNs · classifiers · agents
+            1D-CNNs · PyTorch · agents
           </div>
 
           <div class="tool">
             <strong>Neural data</strong>
-            SEEG · ripples · visualization
+            SEEG · ripples · FieldTrip
           </div>
         </div>
       </div>
@@ -1411,19 +1314,19 @@
             <svg viewBox="0 0 520 420" role="img" aria-label="Human hippocampus, SEEG contacts, ripple activity, and learning circuitry">
               <defs>
                 <linearGradient id="researchHippo" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#315a40" stop-opacity=".95"/>
-                  <stop offset="58%" stop-color="#6f8f73" stop-opacity=".72"/>
-                  <stop offset="100%" stop-color="#a77745" stop-opacity=".72"/>
+                  <stop offset="0%" stop-color="#2c4d37" stop-opacity=".95"/>
+                  <stop offset="58%" stop-color="#5b7a60" stop-opacity=".72"/>
+                  <stop offset="100%" stop-color="#91683c" stop-opacity=".72"/>
                 </linearGradient>
 
                 <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-                  <path d="M0,0 L0,6 L9,3 z" fill="#315a40"/>
+                  <path d="M0,0 L0,6 L9,3 z" fill="#2c4d37"/>
                 </marker>
               </defs>
 
-              <rect x="24" y="30" width="472" height="360" rx="28" fill="#fffdf8" stroke="#ded4c3"/>
+              <rect x="24" y="30" width="472" height="360" rx="12" fill="#fdfcf8" stroke="#e6e2d8"/>
 
-              <text x="56" y="72" font-family="IBM Plex Mono, monospace" font-size="12" fill="#716b60" letter-spacing="1">
+              <text x="56" y="72" font-family="IBM Plex Mono, monospace" font-size="12" fill="#666666" letter-spacing="1">
                 HUMAN HIPPOCAMPAL LEARNING CIRCUITRY
               </text>
 
@@ -1451,21 +1354,21 @@
                    C279 242 229 243 195 228
                    C171 218 153 220 131 213Z"
                 fill="none"
-                stroke="#fbf8f1"
+                stroke="#fdfcf8"
                 stroke-width="6"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
 
-              <g fill="#315a40">
+              <g fill="#2c4d37">
                 <circle cx="139" cy="210" r="5"/>
                 <circle cx="176" cy="103" r="5"/>
                 <circle cx="232" cy="113" r="5"/>
                 <circle cx="312" cy="142" r="5"/>
               </g>
 
-              <text x="122" y="268" font-family="IBM Plex Mono, monospace" font-size="12" fill="#315a40">SEEG contacts</text>
-              <text x="245" y="98" font-family="IBM Plex Mono, monospace" font-size="12" fill="#315a40">CA1</text>
+              <text x="122" y="268" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2c4d37">SEEG contacts</text>
+              <text x="245" y="98" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2c4d37">CA1</text>
 
               <path
                 d="M70 305
@@ -1480,28 +1383,28 @@
                    C291 323 291 293 304 293
                    C317 293 317 307 334 307"
                 fill="none"
-                stroke="#315a40"
+                stroke="#2c4d37"
                 stroke-width="3.5"
                 stroke-linecap="round"
               />
 
-              <text x="70" y="358" font-family="IBM Plex Mono, monospace" font-size="12" fill="#716b60">
+              <text x="70" y="358" font-family="IBM Plex Mono, monospace" font-size="12" fill="#666666">
                 sharp-wave ripple activity
               </text>
 
               <g>
-                <rect x="370" y="106" width="94" height="42" rx="14" fill="#f8f2e8" stroke="#ded4c3"/>
-                <text x="391" y="132" font-family="IBM Plex Mono, monospace" font-size="11" fill="#315a40">Context</text>
+                <rect x="370" y="106" width="94" height="42" rx="6" fill="#fbfaf6" stroke="#e6e2d8"/>
+                <text x="391" y="132" font-family="IBM Plex Mono, monospace" font-size="11" fill="#2c4d37">Context</text>
 
-                <rect x="370" y="182" width="94" height="42" rx="14" fill="#f8f2e8" stroke="#ded4c3"/>
-                <text x="392" y="208" font-family="IBM Plex Mono, monospace" font-size="11" fill="#315a40">Color</text>
+                <rect x="370" y="182" width="94" height="42" rx="6" fill="#fbfaf6" stroke="#e6e2d8"/>
+                <text x="392" y="208" font-family="IBM Plex Mono, monospace" font-size="11" fill="#2c4d37">Color</text>
 
-                <rect x="370" y="258" width="94" height="42" rx="14" fill="#f8f2e8" stroke="#ded4c3"/>
-                <text x="390" y="284" font-family="IBM Plex Mono, monospace" font-size="11" fill="#315a40">Memory</text>
+                <rect x="370" y="258" width="94" height="42" rx="6" fill="#fbfaf6" stroke="#e6e2d8"/>
+                <text x="390" y="284" font-family="IBM Plex Mono, monospace" font-size="11" fill="#2c4d37">Memory</text>
 
-                <path d="M330 150 C350 140 352 127 370 127" fill="none" stroke="#315a40" stroke-width="2" marker-end="url(#arrow)"/>
-                <path d="M330 205 C350 203 352 203 370 203" fill="none" stroke="#315a40" stroke-width="2" marker-end="url(#arrow)"/>
-                <path d="M330 260 C350 266 352 279 370 279" fill="none" stroke="#315a40" stroke-width="2" marker-end="url(#arrow)"/>
+                <path d="M330 150 C350 140 352 127 370 127" fill="none" stroke="#2c4d37" stroke-width="2" marker-end="url(#arrow)"/>
+                <path d="M330 205 C350 203 352 203 370 203" fill="none" stroke="#2c4d37" stroke-width="2" marker-end="url(#arrow)"/>
+                <path d="M330 260 C350 266 352 279 370 279" fill="none" stroke="#2c4d37" stroke-width="2" marker-end="url(#arrow)"/>
               </g>
             </svg>
           </div>
@@ -1588,11 +1491,11 @@
           </article>
 
           <article class="project-card">
-            <h3>1D-CNN for ripple classification</h3>
+            <h3>sEEG RIPPY</h3>
             <p>
-              A Python-based deep learning pipeline for classifying hippocampal ripple events from
-              one-dimensional electrophysiological signals. The project includes signal preprocessing,
-              model training, evaluation workflows, and comparison with rule-based ripple detection.
+              A 1D convolutional neural network pipeline for automated sharp-wave ripple detection in 
+              intracranial EEG recordings. The project includes sophisticated signal preprocessing, robust model 
+              training in PyTorch, evaluation workflows, and comparison with traditional rule-based detection methods.
             </p>
             <div class="project-footer">
               <span class="chip">Python</span>
@@ -1632,21 +1535,6 @@
               <span class="chip">GUI</span>
               <span class="chip">Visualization</span>
               <span class="chip gold">SEEG</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>AI workflow agent</h3>
-            <p>
-              A personal AI-agent project for tracking opportunities, organizing professional materials,
-              and supporting structured decision-making. The project demonstrates practical automation,
-              LLM-based workflow design, and human-in-the-loop productivity tools.
-            </p>
-            <div class="project-footer">
-              <span class="chip">Python</span>
-              <span class="chip">LLM tools</span>
-              <span class="chip">Automation</span>
-              <span class="chip muted">Personal project</span>
             </div>
           </article>
 
@@ -1707,18 +1595,6 @@
               <span class="chip gold">Hippocampal subfields</span>
             </div>
           </article>
-
-          <article class="pub">
-            <div class="title">
-              Functional MRI [chapter]
-            </div>
-            <div class="cite">
-              Oxford University Press. [Add full chapter title &amp; year.]
-            </div>
-            <div class="tag-row">
-              <span class="chip">Book chapter</span>
-            </div>
-          </article>
         </div>
 
         <p class="scholar-link prose">
@@ -1742,9 +1618,7 @@
       <div class="contact-panel">
         <div class="contact-box">
           <p>
-            I am open to research and industry roles involving computational science, AI for health,
-            health data analysis, clinical neuroscience, scientific software, and interpretable modeling
-            of complex biological data.
+            As I finalize my PhD for defense in Summer 2026, I am actively seeking research and industry roles involving computational science, AI for health, health data analysis, clinical neuroscience, scientific software, and the interpretable modeling of complex biological data.
           </p>
 
           <a class="email-link" href="mailto:nmortaza@uwo.ca">
@@ -1755,8 +1629,7 @@
         <div class="links" aria-label="Professional links">
           <a href="https://scholar.google.com/citations?user=CeyVQJ0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
           <a href="https://github.com/Nasim-photon" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <span title="Replace this placeholder with your LinkedIn URL">LinkedIn</span>
-          <span title="Replace this placeholder with your ORCID URL">ORCID</span>
+          <a href="https://www.linkedin.com/in/nasimmortazavi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://twitter.com/NasimMortazavi" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
       </div>
